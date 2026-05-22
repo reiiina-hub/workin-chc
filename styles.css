@@ -236,7 +236,8 @@ body {
 
 /* Intro Overlay Styles */
 .intro-overlay {
-    position: fixed; /* 改為 fixed 確保涵蓋整個瀏覽器視窗 */
+    position: fixed;
+    /* 改為 fixed 確保涵蓋整個瀏覽器視窗 */
     top: 0;
     left: 0;
     width: 100%;
@@ -248,8 +249,10 @@ body {
     display: flex;
     /* 移除 align-items: center，改用 margin: auto 來避免內容過高時頂部被裁切 */
     padding: 20px;
-    overflow-y: auto; /* 允許內容過高時上下滑動 */
-    border-radius: 0; /* fixed 滿版不需要圓角 */
+    overflow-y: auto;
+    /* 允許內容過高時上下滑動 */
+    border-radius: 0;
+    /* fixed 滿版不需要圓角 */
     opacity: 1;
     transition: opacity 0.6s ease-out, visibility 0.6s ease-out;
 }
@@ -265,7 +268,8 @@ body {
     border-radius: 24px;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
     max-width: 750px;
-    margin: auto; /* 搭配外層 flex，達成完美的垂直水平置中，且不裁切 */
+    margin: auto;
+    /* 搭配外層 flex，達成完美的垂直水平置中，且不裁切 */
     text-align: center;
     animation: slideUpFade 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     border: 1px solid rgba(255, 255, 255, 0.8);
@@ -335,6 +339,96 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 25px;
     margin-top: 20px;
+}
+
+.timeline-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 0;
+    position: relative;
+}
+
+/* 垂直線 */
+.timeline-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 40px;
+    width: 4px;
+    background: #dfe6e9;
+    border-radius: 2px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 90px;
+}
+
+/* 圓點 (Hollow dot on the line) */
+.timeline-dot {
+    position: absolute;
+    left: 42px; /* Center perfectly on the 4px line at left: 40px */
+    top: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    background: white;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 0 6px rgba(0,0,0,0.05); /* Will be overridden inline */
+}
+
+/* 內容卡片 */
+.timeline-item-content {
+    width: 100%;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #f1f2f6;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-item-content:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+}
+
+.timeline-year {
+    font-size: 1.05rem;
+    font-weight: 800;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.timeline-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #2d3436;
+    margin-bottom: 12px;
+}
+
+.timeline-text {
+    font-size: 1rem;
+    color: #636e72;
+    line-height: 1.7;
+}
+
+.timeline-item-content img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 
 .social-card {
@@ -412,38 +506,54 @@ body {
 /* 平板尺寸 (Tablet) */
 @media (max-width: 1024px) {
     #app {
-        min-width: 0; /* 解除 1000px 的限制 */
-        margin: 20px auto; /* 減少上下邊距 */
-        width: 95%; /* 留一點點邊界，不要完全貼死 */
+        min-width: 0;
+        /* 解除 1000px 的限制 */
+        margin: 20px auto;
+        /* 減少上下邊距 */
+        width: 95%;
+        /* 留一點點邊界，不要完全貼死 */
     }
 
-    .base-map, .map-bg {
-        border-radius: 12px; /* 稍微縮小圓角 */
+    .base-map,
+    .map-bg {
+        border-radius: 12px;
+        /* 稍微縮小圓角 */
     }
-    
+    /* Timeline RWD (Mobile/Tablet) */
+    .timeline-container::before {
+        left: 20px;
+    }
+    .timeline-item {
+        padding-left: 60px;
+    }
+    .timeline-dot {
+        left: 22px;
+    }
+
     .label-tag {
-        font-size: 12px; /* 標籤字體稍微縮小 */
+        font-size: 12px;
+        /* 標籤字體稍微縮小 */
         padding: 4px 10px;
         margin-top: -10px;
     }
-    
+
     .intro-content {
         padding: 40px 30px;
         width: 90%;
     }
-    
+
     .intro-title {
         font-size: 1.6rem;
     }
-    
+
     .intro-subtitle {
         font-size: 1rem;
     }
-    
+
     .intro-conclusion {
         font-size: 1.05rem;
     }
-    
+
     .intro-enter-btn {
         padding: 12px 30px;
         font-size: 1.1rem;
@@ -453,27 +563,35 @@ body {
 /* 手機尺寸 (Mobile) */
 @media (max-width: 768px) {
     #app {
-        margin: 0 auto; /* 移除外邊距 */
-        width: 100%; /* 完全貼齊螢幕邊緣 */
+        margin: 0 auto;
+        /* 移除外邊距 */
+        width: 100%;
+        /* 完全貼齊螢幕邊緣 */
     }
-    
+
     #map-view.active {
         display: flex;
-        align-items: center; /* 讓地圖在畫面中垂直置中 */
-        min-height: 100vh; /* 確保背景灰色區塊能被置中配置 */
+        align-items: center;
+        /* 讓地圖在畫面中垂直置中 */
+        min-height: 100vh;
+        /* 確保背景灰色區塊能被置中配置 */
     }
-    
+
     .map-container {
         width: 100%;
-        overflow-x: auto; /* 允許地圖太寬時可以左右滑動 */
+        overflow-x: auto;
+        /* 允許地圖太寬時可以左右滑動 */
         -webkit-overflow-scrolling: touch;
-        padding: 20px 0; /* 上下留一點呼吸空間 */
+        padding: 20px 0;
+        /* 上下留一點呼吸空間 */
     }
-    
+
     .base-map {
-        min-width: 800px; /* 強制地圖至少有 800px 寬，確保建築物大到可以用手指點擊 */
+        min-width: 800px;
+        /* 強制地圖至少有 800px 寬，確保建築物大到可以用手指點擊 */
         margin: 0 auto;
-        border-radius: 0; /* 手機上移除圓角 */
+        border-radius: 0;
+        /* 手機上移除圓角 */
     }
 
     .map-bg {
@@ -481,31 +599,33 @@ body {
     }
 
     .label-tag {
-        font-size: 9px; /* 手機上進一步縮小標籤 */
+        font-size: 9px;
+        /* 手機上進一步縮小標籤 */
         padding: 2px 6px;
         border-width: 1px;
     }
-    
+
     .content-header {
         padding: 15px 20px;
     }
-    
+
     .content-body {
         padding: 20px 15px;
     }
-    
+
     .intro-content {
         padding: 30px 20px;
         width: 85%;
     }
-    
+
     .intro-title {
         font-size: 1.3rem;
         margin-bottom: 20px;
     }
-    
+
     .social-grid {
-        grid-template-columns: 1fr; /* 在手機上強制社群卡片單排顯示 */
+        grid-template-columns: 1fr;
+        /* 在手機上強制社群卡片單排顯示 */
     }
 }
 
@@ -517,7 +637,7 @@ body {
     margin: 0 auto;
     background: white;
     border-radius: 20px;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
     overflow: hidden;
     min-height: 550px;
     position: relative;
@@ -525,7 +645,9 @@ body {
     flex-direction: column;
 }
 
-.quiz-welcome, .quiz-question-view, .quiz-result-view {
+.quiz-welcome,
+.quiz-question-view,
+.quiz-result-view {
     padding: 40px;
     flex: 1;
     display: flex;
@@ -544,8 +666,15 @@ body {
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 .quiz-start-btn {
@@ -615,7 +744,7 @@ body {
     background: white;
     color: #0D2D5A;
     border-radius: 4px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     margin-bottom: 8px;
 }
 
@@ -712,7 +841,7 @@ body {
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .result-subtitle {
@@ -816,10 +945,64 @@ body {
 }
 
 @media (max-width: 768px) {
-    .quiz-welcome, .quiz-question-view, .quiz-result-view {
+
+    .quiz-welcome,
+    .quiz-question-view,
+    .quiz-result-view {
         padding: 25px 20px;
     }
+
     .quiz-question-title {
         font-size: 1.2rem;
     }
+}
+
+/* =========================================
+   翻轉卡片 (Flip Card UI)
+========================================= */
+.flip-card {
+    background-color: transparent;
+    height: 320px;
+    perspective: 1000px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.flip-card-front {
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
 }
