@@ -1,33 +1,525 @@
+const internsData = [
+    {
+        id: "serene",
+        name: "Serene",
+        dept: "人文處",
+        school: "師大國際人資所",
+        quote: "最驚喜的是超舒適的新辦公環境，還有各種健康促進活動，讓人真的感受到公司滿滿的用心！",
+        date: "2025/10/03",
+        theme: "environment",
+        themeColor: "#ff7675",
+        avatarEmoji: "🌸",
+        avatarBg: "linear-gradient(135deg, #ff9f43, #ff7675)"
+    },
+    {
+        id: "anita",
+        name: "Anita",
+        dept: "總管理處",
+        school: "師大管理研究所",
+        quote: "因為就博會上傳統產業積極轉型被吸引而加入。最喜歡這裡溫馨的工作氛圍與全新辦公空間！期許在實習期間能將課堂知識應用到專案中，與同事們一起激盪出更多火花！",
+        date: "2025/10/17",
+        theme: "growth",
+        themeColor: "#fdcb6e",
+        avatarEmoji: "🍬",
+        avatarBg: "linear-gradient(135deg, #ffeaa7, #fdcb6e)"
+    },
+    {
+        id: "delphine",
+        name: "Delphine",
+        dept: "秘書室",
+        school: "輔大日文系",
+        quote: "曾在零售業打工的她，笑說：『一杯手搖飲加上開心的工作氛圍，就是最完美的組合！』",
+        date: "2025/11/21",
+        theme: "vibe",
+        themeColor: "#a29bfe",
+        avatarEmoji: "🥤",
+        avatarBg: "linear-gradient(135deg, #c7ecee, #a29bfe)"
+    },
+    {
+        id: "andrew",
+        name: "Andrew",
+        dept: "董秘室",
+        school: "台大會計系",
+        quote: "最愛的福利是豪華健身房，設備齊全、空間寬敞又免費，讓運動咖超滿意！",
+        date: "2026/01/15",
+        theme: "environment",
+        themeColor: "#74b9ff",
+        avatarEmoji: "🏋️",
+        avatarBg: "linear-gradient(135deg, #81ecec, #74b9ff)"
+    },
+    {
+        id: "amber",
+        name: "Amber",
+        dept: "永續發展辦公室",
+        school: "[實習生]",
+        quote: "最驚訝的是實習生有真正被賦權的空間——提出的想法有被實踐的可能，不只是打雜。也沒想到公司有羽球社，跨部門互動讓我每週一都期待去打球。核心感受是『被認真看待』。",
+        date: "2023/12/01",
+        theme: "empowerment",
+        themeColor: "#2ecc71",
+        avatarEmoji: "🌱",
+        avatarBg: "linear-gradient(135deg, #55efc4, #2ecc71)"
+    },
+    {
+        id: "mike",
+        name: "Mike",
+        dept: "永續發展辦公室",
+        school: "[實習生]",
+        quote: "從完全看不懂永續報告書的新手，成長到可以上台報告。我特別珍惜每次簡報機會，連以前猶豫要不要報名歌唱比賽的緊張感，都在這些『被撐住』的時刻化為力量，發現自己不同的能耐！",
+        date: "2023/12/01",
+        theme: "growth",
+        themeColor: "#1abc9c",
+        avatarEmoji: "📊",
+        avatarBg: "linear-gradient(135deg, #e8f8f5, #1abc9c)"
+    },
+    {
+        id: "carol",
+        name: "Carol",
+        dept: "策略經營處",
+        school: "[實習生]",
+        quote: "帶著對傳產的刻板印象進來，實際卻發現氛圍超友善、彈性上下班，還有高級健身房！印象最深的是『總經理早午餐』——能直接跟總經理對談，感受到被真誠對待，而非只是個實習生。",
+        date: "2023/12/01",
+        theme: "vibe",
+        themeColor: "#e67e22",
+        avatarEmoji: "💡",
+        avatarBg: "linear-gradient(135deg, #f39c12, #e67e22)"
+    },
+    {
+        id: "chenghan",
+        name: "李承翰",
+        dept: "稽核室",
+        school: "[實習生]",
+        quote: "主管給予高度自主性，讓我自己決定如何達成目標。我用程式能力實際加速了稽核流程，還設計了視覺化圖表與稽核平台。這段經歷不只提升技術，也讓我更確立了未來方向！",
+        date: "2023/12/01",
+        theme: "empowerment",
+        themeColor: "#9b59b6",
+        avatarEmoji: "💻",
+                avatarBg: "linear-gradient(135deg, #dec0f1, #9b59b6)"
+    },
+    {
+        id: "angel",
+        name: "Angel",
+        dept: "總務部",
+        school: "[實習生]",
+        quote: "一開始覺得總務的事務不起眼，後來體悟到『像一顆螺絲，無論大小都有其重要性』。主管與同事在我需要簡報報告時，給予大量練習陪伴，讓我感受到努力真的有被看見！",
+        date: "2023/12/01",
+        theme: "empowerment",
+        themeColor: "#95a5a6",
+        avatarEmoji: "⚙️",
+        avatarBg: "linear-gradient(135deg, #dfe6e9, #95a5a6)"
+    },
+    {
+        id: "tingwei",
+        name: "葉庭維",
+        dept: "資訊處",
+        school: "[實習生]",
+        quote: "在 Eric 的帶領下從陌生到上手，第一次執行設備維修時獲得團隊充分支持與引導，緊張感瞬間被溫暖化解。團隊的細心與溫馨讓我更有信心面對新挑戰！",
+        date: "2023/12/01",
+        theme: "growth",
+        themeColor: "#3498db",
+        avatarEmoji: "🔌",
+        avatarBg: "linear-gradient(135deg, #74b9ff, #3498db)"
+    },
+    {
+        id: "yujie",
+        name: "陳語婕",
+        dept: "人力資源處",
+        school: "[實習生]",
+        quote: "沒想到自己一個人可以完成那麼多活動策劃（實習生分享會、執行長下午茶、萬聖節活動等）。主管給我框架內的高度彈性，讓我感受到自己是『團隊裡重要的一員』，而非只是普通小實習生！",
+        date: "2023/12/01",
+        theme: "empowerment",
+        themeColor: "#e74c3c",
+        avatarEmoji: "❤️",
+        avatarBg: "linear-gradient(135deg, #ff7675, #e74c3c)"
+    }
+];
+
 const mapData = {
     story: {
         title: "嘉人視角專區 👀",
         content: `
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
-                <div class="placeholder-card" style="border-top: 5px solid #ff7675;">
-                    <h2 style="color: #ff7675; margin-bottom: 10px;">女力領導</h2>
-                    <p style="color: #636e72; line-height: 1.6;">在嘉新，我們相信多元共融的力量。這裡有著無數傑出的女性領導者，她們以堅韌、細膩與創新的思維，帶領團隊在各個事業體中不斷突破。閱讀她們的故事，看見溫柔而堅定的女力如何推動企業前進。</p>
+                <div class="placeholder-card" style="border-top: 5px solid #ff7675; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(255, 118, 117, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('story_women_leadership')">
+                    <h2 style="color: #ff7675; margin-bottom: 10px;">在嘉裡，DEI 不是口號</h2>
+                    <p style="color: #636e72; line-height: 1.6;">在嘉新，我們相信多元共融的力量。透過高比例女性決策者的引領與友善家庭政策的實踐，我們為每位同仁編織支持網，讓工作與生活能自在平衡。點擊探索嘉新如何將 DEI 融入日常。</p>
+                    <div style="margin-top: 15px; font-weight: bold; color: #ff7675; text-align: right;">探索 DEI 實踐故事 ▶</div>
                 </div>
                 <div class="placeholder-card" style="border-top: 5px solid #74b9ff; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(116, 185, 255, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('story_care')">
                     <h2 style="color: #74b9ff; margin-bottom: 10px;">全面員工支持與關懷</h2>
                     <p style="color: #636e72; line-height: 1.6; font-weight: bold; margin-bottom: 10px;">360 度全方位福利</p>
-                    <p style="color: #636e72; line-height: 1.6;">從「日常彈性」、「身心健康」、「財富保障」到「生老病死」的全方位照顧。我們提供優於法規的假勤與各項補助，做為嘉人們最安心的後盾，打造工作與生活雙贏的幸福職場。</p>
+                    <p style="color: #636e72; line-height: 1.6;">從「日常彈性」、「身心健康」、「財富保障」到「生老病死」的全方位照顧。我們 offer 優於法規的假勤與各項補助，做為嘉人們最安心的後盾，打造工作與生活雙贏的幸福職場。</p>
                     <div style="margin-top: 15px; font-weight: bold; color: #74b9ff; text-align: right;">探索完整福利 ▶</div>
-                </div>
-                <div class="placeholder-card" style="border-top: 5px solid #a29bfe;">
-                    <h2 style="color: #a29bfe; margin-bottom: 10px;">嘉人計畫</h2>
-                    <p style="color: #636e72; line-height: 1.6; font-weight: bold; margin-bottom: 10px;">實習生怎麼說</p>
-                    <p style="color: #636e72; line-height: 1.6;">「嘉人計畫」是我們培育未來人才的搖籃。在這裡，實習生不只是旁觀者，而是實際參與專案的實作夥伴。聽聽歷屆實習生分享他們在嘉新的成長歷程、獲得的啟發，以及這段寶貴經歷如何影響他們的職涯發展。</p>
                 </div>
                 <div class="placeholder-card" style="border-top: 5px solid #fdcb6e; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(253, 203, 110, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('story_benefits')">
                     <h2 style="color: #fdcb6e; margin-bottom: 10px;">生活由我定義</h2>
-                    <p style="color: #636e72; line-height: 1.6; font-weight: bold; margin-bottom: 10px;">彈性工作日常</p>
-                    <p style="color: #636e72; line-height: 1.6;">早鳥還是夜貓？別人補班我們在幹嘛？透過真實的嘉人視角，帶你偷看我們的貼心福利，了解嘉新如何實踐「工作與生活完美平衡」！</p>
-                    <div style="margin-top: 15px; font-weight: bold; color: #fdcb6e; text-align: right;">偷偷看嘉人動態 👀 ▶</div>
+                    <p style="color: #636e72; line-height: 1.6; font-weight: bold; margin-bottom: 10px;">工作與生活</p>
+                    <p style="color: #636e72; line-height: 1.6;">是工作，還是生活？每個人心裡都有不同的答案。來聽聽在不同階段與職涯的嘉人們，分享他們如何在嘉新幸福地「工作與生活」！</p>
+                    <div style="margin-top: 15px; font-weight: bold; color: #fdcb6e; text-align: right;">看個人動態 ▶</div>
+                </div>
+                <div class="placeholder-card" style="border-top: 5px solid #a29bfe; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(162, 155, 254, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('story_interns')">
+                    <h2 style="color: #a29bfe; margin-bottom: 10px;">嘉人計畫</h2>
+                    <p style="color: #636e72; line-height: 1.6; font-weight: bold; margin-bottom: 10px;">實習生怎麼說</p>
+                    <p style="color: #636e72; line-height: 1.6;">聽聽在不同部門實習的年輕夥伴們，如何在嘉新獲得專業成長與溫慢支持。最真實的實習心得分享，帶你一窺嘉人的日常實習生活！</p>
+                    <div style="margin-top: 15px; font-weight: bold; color: #a29bfe; text-align: right;">看看實習小檔案 ▶</div>
                 </div>
             </div>
         `
     },
-    story_benefits: {
+    story_women_leadership: {
+
+
+        title: "在嘉裡，DEI 不是口號 🌸",
+        content: `
+            <div style="max-width: 950px; margin: 0 auto; padding-bottom: 40px;">
+                <!-- 頂部指標看板 -->
+                <div class="women-leader-header animate-fade-in">
+                    <h2 style="color: #d63031; font-size: 1.8rem; margin-bottom: 15px; font-weight: bold;">在「嘉」裡，DEI 不是口號</h2>
+                    <p style="color: #455a64; line-height: 1.8; font-size: 1.1rem; margin-bottom: 0;">
+                        我們深信，真正的多元共融是尊重每個人的獨特性與生活角色。不論性別、年齡、背景，在嘉新，我們提供公平且具包容性的舞台，讓每位夥伴都能無後顧之憂地施展才華、兼顧家庭，並找到最真實的自我歸屬感。
+                    </p>
+                    
+                    <div class="women-leader-metrics">
+                        <div class="women-metric-num">60%</div>
+                        <div>
+                            <div class="women-metric-label">女性主管比例</div>
+                            <div class="women-metric-sub">遠超產業平均，以實質行動賦能優秀女性，打造公平的決策舞台。</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 總經理專欄 -->
+                <h3 style="font-size: 1.4rem; color: #2d3436; font-weight: bold; margin-bottom: 20px; letter-spacing: 1px;">
+                    🎙️ 總經理專欄特寫
+                </h3>
+                
+                <div class="gm-column-section animate-fade-in">
+                    <div class="gm-profile-info">
+                        <div class="leader-card-header">
+                            <div class="leader-avatar">🧗‍♀️</div>
+                            <div class="leader-info">
+                                <div class="leader-name-row">
+                                    <span class="leader-name">王立心 Liz</span>
+                                    <span class="leader-dept">總經理</span>
+                                </div>
+                                <span class="leader-nickname">#嘉新極限體能王</span>
+                            </div>
+                        </div>
+                        <div class="leader-motto-box">
+                            <p class="leader-motto">「活出自己的色彩」</p>
+                        </div>
+                        
+                        <div class="leader-tab-nav" style="margin-bottom: 15px;">
+                            <button class="leader-tab-btn active" onclick="switchWomenLeaderTab('liz', 'dei')">💼 職涯與 DEI</button>
+                            <button class="leader-tab-btn" onclick="switchWomenLeaderTab('liz', 'family')">🏡 生活與家人</button>
+                        </div>
+                        
+                        <div class="leader-tab-content-wrapper" style="min-height: 140px;">
+                            <div id="liz-dei" class="leader-tab-content active">
+                                <p class="leader-content-p">
+                                    身為台灣水泥業首位且唯一的女性總經理，Liz 提倡透明與透明領導，積極推動多元、平等與共融（DEI）核心價值。她堅信：「不論種族、年齡、性別、經濟條件，每個人皆能被尊重、找到自己的價值。」藉由打造工作與生活平衡的職場，讓每位員工能在生活中活出自己的色彩。
+                                </p>
+                            </div>
+                            <div id="liz-family" class="leader-tab-content">
+                                <p class="leader-content-p">
+                                    Liz 是養育三位大中小男孩的三寶媽，也是熱愛攀岩、SUP 的極限運動迷。她曾因產後憂鬱走過低谷，因而積極推動 EAP 心理諮商，並親身示範成為公司首位申請育兒留停的主管。她對孩子說過最動人的話：「就像你們在游泳池游泳，我希望你可以游得越遠越好，而媽媽就是『岸』，累了隨時游回來休息。」
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="gm-video-wrapper">
+                        <div style="font-weight: bold; color: #2d3436; margin-bottom: 15px; font-size: 1.1rem; display: flex; align-items: center; gap: 8px;">
+                            <span>📚</span> 媒體專訪與影音連結
+                        </div>
+                        <div style="display: flex; flex-direction: column; gap: 12px;">
+                            <a href="https://www.youtube.com/watch?v=-DvsYo51fgQ" target="_blank" style="display: flex; align-items: center; padding: 12px 15px; background: #fff5f5; border: 1px solid #ffe3e3; border-radius: 12px; text-decoration: none; color: #2d3436; transition: all 0.2s;" onmouseover="this.style.borderColor='#ff7675'; this.style.transform='translateX(3px)';" onmouseout="this.style.borderColor='#ffe3e3'; this.style.transform='translateX(0)';">
+                                <div style="font-size: 1.8rem; margin-right: 12px; filter: drop-shadow(0 2px 5px rgba(255, 118, 117, 0.15));">🎥</div>
+                                <div style="flex-grow: 1;">
+                                    <div style="font-weight: bold; font-size: 0.95rem; color: #d63031;">與軒軒講 EP 26 專訪影音 ↗</div>
+                                    <div style="font-size: 0.8rem; color: #636e72; margin-top: 2px;">王立心 Liz 暢談女性領導力與生活哲學</div>
+                                </div>
+                            </a>
+                            
+                            <a href="https://womany.net/read/article/32979" target="_blank" style="display: flex; align-items: center; padding: 12px 15px; background: #fdfbf7; border: 1px solid #fcf6ec; border-radius: 12px; text-decoration: none; color: #2d3436; transition: all 0.2s;" onmouseover="this.style.borderColor='#ff9f43'; this.style.transform='translateX(3px)';" onmouseout="this.style.borderColor='#fcf6ec'; this.style.transform='translateX(0)';">
+                                <div style="font-size: 1.8rem; margin-right: 12px; filter: drop-shadow(0 2px 5px rgba(253, 159, 67, 0.15));">📰</div>
+                                <div style="flex-grow: 1;">
+                                    <div style="font-weight: bold; font-size: 0.95rem; color: #e67e22;">女人迷 Womany 人物專訪 ↗</div>
+                                    <div style="font-size: 0.8rem; color: #636e72; margin-top: 2px;">從自身產後憂鬱經驗推動嘉新 DEI 變革</div>
+                                </div>
+                            </a>
+                            
+                            <a href="https://www.cna.com.tw/news/afe/202210230034.aspx" target="_blank" style="display: flex; align-items: center; padding: 12px 15px; background: #f5f6fa; border: 1px solid #dfe6e9; border-radius: 12px; text-decoration: none; color: #2d3436; transition: all 0.2s;" onmouseover="this.style.borderColor='#74b9ff'; this.style.transform='translateX(3px)';" onmouseout="this.style.borderColor='#dfe6e9'; this.style.transform='translateX(0)';">
+                                <div style="font-size: 1.8rem; margin-right: 12px; filter: drop-shadow(0 2px 5px rgba(116, 185, 255, 0.15));">🎙️</div>
+                                <div style="flex-grow: 1;">
+                                    <div style="font-weight: bold; font-size: 0.95rem; color: #0984e3;">中央社 CNA 獨家專訪 ↗</div>
+                                    <div style="font-size: 0.8rem; color: #636e72; margin-top: 2px;">被當咖啡小妹不尷尬，立志成為女性職場典範</div>
+                                </div>
+                            </a>
+
+                            <a href="https://womany.net/collections/2024CHCGROUP" target="_blank" style="display: flex; align-items: center; padding: 12px 15px; background: #f8f9fa; border: 1px solid #eee; border-radius: 12px; text-decoration: none; color: #2d3436; transition: all 0.2s;" onmouseover="this.style.borderColor='#a29bfe'; this.style.transform='translateX(3px)';" onmouseout="this.style.borderColor='#eee'; this.style.transform='translateX(0)';">
+                                <div style="font-size: 1.8rem; margin-right: 12px; filter: drop-shadow(0 2px 5px rgba(162, 155, 254, 0.15));">🔗</div>
+                                <div style="flex-grow: 1;">
+                                    <div style="font-weight: bold; font-size: 0.95rem; color: #6c5ce7;">「嘉新跟你想的不一樣」專題頁 ↗</div>
+                                    <div style="font-size: 0.8rem; color: #636e72; margin-top: 2px;">深入探索嘉新企業品牌精神與多元福利</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 過渡分隔線 1 -->
+                <div class="dei-transition-divider">
+                    <div class="dei-transition-line"></div>
+                    <div class="dei-transition-text">✨ 「60% 的女性主管，是嘉新 DEI 最直接的體現」</div>
+                </div>
+
+                <!-- 核心女力群像 -->
+                <h3 style="font-size: 1.4rem; color: #2d3436; font-weight: bold; margin-bottom: 25px; text-align: center; letter-spacing: 1px;">
+                    ✨ 優秀女性主管特輯
+                </h3>
+                
+                <div class="leader-grid">
+                    <!-- Leader 1: Jennifer -->
+                    <div class="leader-card">
+                        <div class="leader-card-header">
+                            <div class="leader-avatar">🌸</div>
+                            <div class="leader-info">
+                                <div class="leader-name-row">
+                                    <span class="leader-name">陳文婉 Jennifer</span>
+                                    <span class="leader-dept">人力資源處</span>
+                                </div>
+                                <span class="leader-nickname">#嘉新凍齡高手</span>
+                            </div>
+                        </div>
+                        <div class="leader-motto-box">
+                            <p class="leader-motto">「相信自己」</p>
+                        </div>
+                        
+                        <div class="leader-tab-nav">
+                            <button class="leader-tab-btn active" onclick="switchWomenLeaderTab('jennifer', 'dei')">💼 職涯與 DEI</button>
+                            <button class="leader-tab-btn" onclick="switchWomenLeaderTab('jennifer', 'family')">🏡 生活與家人</button>
+                        </div>
+                        
+                        <div class="leader-tab-content-wrapper">
+                            <div id="jennifer-dei" class="leader-tab-content active">
+                                <p class="leader-content-p">
+                                    「DEI 是不要讓任何事侷限你的發展，勇敢築夢，要相信未來掌握在自己的手中！」作為人資處的舵手，她致力於打破隱性偏見，創造一個對所有背景員工都友善且能發揮所長的支持系統。
+                                </p>
+                            </div>
+                            <div id="jennifer-family" class="leader-tab-content">
+                                <p class="leader-content-p">
+                                    被同事們封為「凍齡高手」的 Jennifer，在生活中時刻保持著自信與熱情。她認為最好的保養品是積極的生活態度與健康的作息，並鼓勵同仁在工作之餘建立健全的個人生活與家庭連結。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leader 2: Jane -->
+                    <div class="leader-card">
+                        <div class="leader-card-header">
+                            <div class="leader-avatar">🍳</div>
+                            <div class="leader-info">
+                                <div class="leader-name-row">
+                                    <span class="leader-name">周月珍 Jane</span>
+                                    <span class="leader-dept">財務處</span>
+                                </div>
+                                <span class="leader-nickname">#嘉新愛心名廚</span>
+                            </div>
+                        </div>
+                        <div class="leader-motto-box">
+                            <p class="leader-motto">「正面思考，人生美好」</p>
+                        </div>
+                        
+                        <div class="leader-tab-nav">
+                            <button class="leader-tab-btn active" onclick="switchWomenLeaderTab('jane', 'dei')">💼 職涯與 DEI</button>
+                            <button class="leader-tab-btn" onclick="switchWomenLeaderTab('jane', 'family')">🏡 生活與家人</button>
+                        </div>
+                        
+                        <div class="leader-tab-content-wrapper">
+                            <div id="jane-dei" class="leader-tab-content active">
+                                <p class="leader-content-p">
+                                    「DEI 對我來說，不僅僅是多元、共融、公平，更是同心協力實現共同的目標、像家人般和睦相處的關鍵！」她在財務處嚴謹的工作中帶入細膩與溫暖，讓團隊能在充滿互信的環境下前進。
+                                </p>
+                            </div>
+                            <div id="jane-family" class="leader-tab-content">
+                                <p class="leader-content-p">
+                                    Jane 是兩個男孩的母親。她擁有全集團公認的「神廚級」好手藝，平日熱愛為家人下廚。她更把這份母愛延伸，在聖誕節為弱勢孩童親自烹飪一整桌的愛心聖誕大餐，用溫馨美食傳遞社會關懷與光芒。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leader 3: 曉芸 -->
+                    <div class="leader-card">
+                        <div class="leader-card-header">
+                            <div class="leader-avatar">👟</div>
+                            <div class="leader-info">
+                                <div class="leader-name-row">
+                                    <span class="leader-name">余曉芸</span>
+                                    <span class="leader-dept">總管理處</span>
+                                </div>
+                                <span class="leader-nickname">#青春系學姐</span>
+                            </div>
+                        </div>
+                        <div class="leader-motto-box">
+                            <p class="leader-motto">「真誠勇敢，堅持無愧」</p>
+                        </div>
+                        
+                        <div class="leader-tab-nav">
+                            <button class="leader-tab-btn active" onclick="switchWomenLeaderTab('xiaoyun', 'dei')">💼 職涯與 DEI</button>
+                            <button class="leader-tab-btn" onclick="switchWomenLeaderTab('xiaoyun', 'family')">🏡 生活與家人</button>
+                        </div>
+                        
+                        <div class="leader-tab-content-wrapper">
+                            <div id="xiaoyun-dei" class="leader-tab-content active">
+                                <p class="leader-content-p">
+                                    「DEI 的發展是要讓員工覺得被尊重、被公平對待、被信任，是創造一個充滿幸福感的工作環境的關鍵。」她相信唯有建立在高度互信上的彈性，才能激發出跨世代同仁的創造力。
+                                </p>
+                            </div>
+                            <div id="xiaoyun-family" class="leader-tab-content">
+                                <p class="leader-content-p">
+                                    充滿朝氣與活力的曉芸，是同仁眼中的「青春系學姐」。她維持身心靈健康與體態的秘訣，就是每週在嘉新大樓的五星級健身房 #fitcollective 重訓揮汗，用自律和運動活出精彩飽滿的個人生活。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Leader 4: Mandy -->
+                    <div class="leader-card">
+                        <div class="leader-card-header">
+                            <div class="leader-avatar">🏡</div>
+                            <div class="leader-info">
+                                <div class="leader-name-row">
+                                    <span class="leader-name">洪美玲 Mandy</span>
+                                    <span class="leader-dept">稽核室</span>
+                                </div>
+                                <span class="leader-nickname">#嘉新好媳婦代表</span>
+                            </div>
+                        </div>
+                        <div class="leader-motto-box">
+                            <p class="leader-motto">「樂在工作，享受人生」</p>
+                        </div>
+                        
+                        <div class="leader-tab-nav">
+                            <button class="leader-tab-btn active" onclick="switchWomenLeaderTab('mandy', 'dei')">💼 職涯與 DEI</button>
+                            <button class="leader-tab-btn" onclick="switchWomenLeaderTab('mandy', 'family')">🏡 生活與家人</button>
+                        </div>
+                        
+                        <div class="leader-tab-content-wrapper">
+                            <div id="mandy-dei" class="leader-tab-content active">
+                                <p class="leader-content-p">
+                                    「DEI 的關鍵是能尊重每個人的差異，提供包容性和公平的工作環境，才能讓員工真正樂於工作，從而創造出幸福的生活。」她將稽核的客觀性與包容思維結合，促進部門之間的和諧溝通。
+                                </p>
+                            </div>
+                            <div id="mandy-family" class="leader-tab-content">
+                                <p class="leader-content-p">
+                                    身為「好媳婦代表」的 Mandy，能輕鬆將家人照顧得妥妥當當，同時在稽核工作上展現專業。她特別感謝嘉新優於勞基法的假勤福利與彈性工時，讓她能在高壓工作與家庭生活間取得完美平衡。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 過渡分隔線 2 -->
+                <div class="dei-transition-divider">
+                    <div class="dei-transition-line"></div>
+                    <div class="dei-transition-text">🌱 「DEI 不只是主管的事 ── 聽聽不同角色的嘉人怎麼說」</div>
+                </div>
+
+                <!-- DEI 實踐：嘉人真心話 -->
+                <div class="testimonial-section animate-fade-in">
+                    <div class="testimonial-grid">
+                        <!-- Card 1: 菱真 -->
+                        <div class="testimonial-card">
+                            <div>
+                                <div class="testimonial-header">
+                                    <div class="testimonial-avatar">🌸</div>
+                                    <div class="testimonial-info">
+                                        <span class="testimonial-name">菱真</span>
+                                        <span class="testimonial-dept">財務處</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial-tags">
+                                    <span class="testimonial-tag">#加入嘉新第3年</span>
+                                    <span class="testimonial-tag">#找到工作與生活的節奏</span>
+                                </div>
+                                <p class="testimonial-quote">
+                                    「加入嘉新大家庭近 3 年，我深刻體會到公司『以人為本』的職場文化。嘉新重視同仁的工作與生活平衡以及身心健康，透過多元活動、感恩節餐會等，促進跨部門的情感連結，讓我在忙碌工作中也能找到支持與歸屬感。」
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 2: 茹蘭 -->
+                        <div class="testimonial-card">
+                            <div>
+                                <div class="testimonial-header">
+                                    <div class="testimonial-avatar">📁</div>
+                                    <div class="testimonial-info">
+                                        <span class="testimonial-name">茹蘭</span>
+                                        <span class="testimonial-dept">董秘室</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial-tags">
+                                    <span class="testimonial-tag">#十年資深</span>
+                                    <span class="testimonial-tag">#還在持續成長</span>
+                                </div>
+                                <p class="testimonial-quote">
+                                    「進入董事會秘書室工作超過十年，隨著公司事業版圖發展與變革，讓我在部門輪調上獲得主管專業支持。公司透過多元溝通管道與培訓計畫，鼓勵不同世代同仁在合作中培養默契，進一步推動了我的職涯成長。」
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 3: 伯謙 -->
+                        <div class="testimonial-card">
+                            <div>
+                                <div class="testimonial-header">
+                                    <div class="testimonial-avatar">🍼</div>
+                                    <div class="testimonial-info">
+                                        <span class="testimonial-name">伯謙</span>
+                                        <span class="testimonial-dept">策略經營處</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial-tags">
+                                    <span class="testimonial-tag">#在嘉新15年</span>
+                                    <span class="testimonial-tag">#從單身到育兒都被支持</span>
+                                </div>
+                                <p class="testimonial-quote">
+                                    「在嘉新工作已超過 15 年，從單身、外派到育兒，公司一直是我堅實的後盾。無論是彈性工時、遠距辦公還是產後護理之家資源，福利都遠超法規，特別讓職場爸爸能更輕鬆地在事業與家庭之間取得完美平衡。」
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Card 4: 以炘 -->
+                        <div class="testimonial-card">
+                            <div>
+                                <div class="testimonial-header">
+                                    <div class="testimonial-avatar">⚖️</div>
+                                    <div class="testimonial-info">
+                                        <span class="testimonial-name">以炘</span>
+                                        <span class="testimonial-dept">法務處</span>
+                                    </div>
+                                </div>
+                                <div class="testimonial-tags">
+                                    <span class="testimonial-tag">#新世代</span>
+                                    <span class="testimonial-tag">#被信任才能走得遠</span>
+                                </div>
+                                <p class="testimonial-quote">
+                                    「身為法務，主管對新世代員工的包容讓我能自在表達意見，並以開放式問題引導我探索解決方案、共同討論。這種被信任與被支持的工作氛圍，大大提升了我面對未來挑戰的解決能力。」
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 返回按鈕 -->
+                <div style="text-align: center; margin-top: 40px;">
+                    <button onclick="navigateTo('story')" style="background: white; color: #ff7675; border: 2px solid #ff7675; padding: 12px 35px; border-radius: 30px; font-size: 1.1rem; cursor: pointer; font-weight: bold; transition: all 0.2s; box-shadow: 0 4px 15px rgba(255, 118, 117, 0.05);">
+                        ← 返回嘉人視角
+                    </button>
+                </div>
+            </div>
+        `
+    },
+story_benefits: {
         title: "生活由我定義 🛋️",
         content: `
             <div style="max-width: 600px; margin: 0 auto; padding-bottom: 40px; display: flex; flex-direction: column; gap: 25px;">
@@ -149,6 +641,14 @@ const mapData = {
                         ← 返回嘉人視角
                     </button>
                 </div>
+            </div>
+        `
+    },
+    story_interns: {
+        title: "實習生小檔案 👀",
+        content: `
+            <div id="interns-container" class="interns-container">
+                <!-- Content will be rendered dynamically by renderInternProfiles() -->
             </div>
         `
     },
@@ -699,7 +1199,7 @@ const mapData = {
                     <div class="social-summary">企業官方動態</div>
                 </a>
                 
-                <a href="#" target="_blank" class="social-card threads" onclick="alert('Threads 連結尚未提供，敬請期待！'); return false;">
+                <a href="https://www.threads.net/@workin.chc" target="_blank" class="social-card threads">
                     <img src="assets/icon_threads.png" alt="Threads" class="social-icon">
                     <div class="social-title">Threads</div>
                     <div class="social-summary">嘉新日常與快訊</div>
@@ -754,6 +1254,8 @@ function navigateTo(viewId) {
 
                 if (viewId === 'quiz') {
                     renderQuizWelcome();
+                } else if (viewId === 'story_interns') {
+                    renderInternProfiles();
                 }
             }, 150);
 
@@ -770,6 +1272,215 @@ function navigateTo(viewId) {
             }
         }
     }
+}
+
+// ==========================================
+// 實習生小檔案邏輯 (Intern Profiles Logic)
+// ==========================================
+let activeInternDept = '全部';
+
+function renderInternProfiles() {
+    const container = document.getElementById('interns-container');
+    if (!container) return;
+
+    // 1. 實習計畫說明與架構圖 HTML
+    const programHtml = `
+        <div class="program-section">
+            <h2 class="program-title">💡 嘉人實習計畫</h2>
+            
+            <!-- 核心亮點說明卡片 -->
+            <div style="background: white; border-radius: 12px; padding: 25px; border: 1px solid #f1f2f6; margin-bottom: 35px; box-shadow: 0 4px 15px rgba(0,0,0,0.01);">
+                <div style="font-weight: bold; color: #d35400; font-size: 1.15rem; margin-bottom: 12px; border-bottom: 2px solid #fcf6ec; padding-bottom: 8px; display: inline-block;">
+                    ✨ 學習 × 成長 × 轉正機會
+                </div>
+                <p style="color: #636e72; line-height: 1.8; font-size: 1.05rem; margin: 0;">
+                    為強化未來人才儲備，嘉新持續推動「嘉人實習計劃」，提供明確的學習目標、專業導師的一對一引導，以及完善的培訓機制，並特別給予表現優秀者轉正機會，確保優秀人才能順利銜接正式職涯，展現我們對人才永續發展的承諾。
+                </p>
+            </div>
+
+            <!-- 7大磐石體驗時間軸 -->
+            <h3 style="font-size: 1.25rem; color: #2d3436; font-weight: bold; margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
+                🚀 嘉人實習生「7大磐石體驗」計畫
+            </h3>
+            
+            <div class="program-timeline">
+                <!-- Step 1 -->
+                <div class="timeline-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <div class="step-title">🗺️ 職場導航｜新人引導</div>
+                        <div class="step-desc">
+                            為確保實習生快速適應工作環境與企業文化，我們配置專業指導員提供必要協助，包括工作內容說明、辦公環境介紹，以及團隊成員認識，幫助實習生順利展開實習旅程。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="timeline-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <div class="step-title">🍕 破冰盛宴｜融合餐會</div>
+                        <div class="step-desc">
+                            透過輕鬆的餐敘方式，讓實習生與指導員、團隊成員進行互動交流，建立良好關係，同時分享企業文化與實習心得，加速融入團隊。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="timeline-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <div class="step-title">⚡ 戰力強化｜新人訓練</div>
+                        <div class="step-desc">
+                            提供一系列的培訓課程，涵蓋企業文化、職場技能及專業知識，讓實習生具備基礎職場能力，為後續工作奠定穩固基礎。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="timeline-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <div class="step-title">🚢 沉浸式探索｜企業參訪</div>
+                        <div class="step-desc">
+                            安排參觀嘉新旗下重要據點，如嘉新國際基隆港，讓實習生深入了解公司水泥與裝卸倉儲業務運作，拓展視野並增強對企業的認識。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="timeline-step">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <div class="step-title">🎯 跨界挑戰｜跨部門合作專案</div>
+                        <div class="step-desc">
+                            鼓勵實習生參與跨部門合作專案，培養溝通協調能力與團隊合作精神，並在實際運作中學習解決問題，提升綜合職能。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="timeline-step">
+                    <div class="step-number">6</div>
+                    <div class="step-content">
+                        <div class="step-title">📈 成長回顧｜月分享會</div>
+                        <div class="step-desc">
+                            每月舉辦實習生分享會，讓大家交流學習成果、職場體驗與心得，並透過回饋機制優化實習計畫，確保每位實習生都能獲得豐富的學習收穫。
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="timeline-step">
+                    <div class="step-number">7</div>
+                    <div class="step-content">
+                        <div class="step-title">🏆 終極SHOWTIME｜期末分享會</div>
+                        <div class="step-desc">
+                            期末分享會是嘉人實習計畫的重要環節，讓實習生有機會分享在實習期間的學習成果、挑戰突破與心得體驗，向全體同仁展示精彩成果！
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+
+    // 2. 實習生心聲主題分類定義
+    const themes = [
+        {
+            key: "growth",
+            title: "🌱 挑戰與成長 (Growth & Practice)",
+            color: "#fdcb6e",
+            desc: "在被支持的環境中跨出舒適圈，將課堂知識轉化為實戰能耐。"
+        },
+        {
+            key: "empowerment",
+            title: "💪 賦權與價值 (Empowerment & Trust)",
+            color: "#2ecc71",
+            desc: "拒絕打雜！在這裡，我們提出的想法有被實踐的可能，深刻感受被認真對待。"
+        },
+        {
+            key: "environment",
+            title: "🥰 福利與環境 (Welfare & Health)",
+            color: "#ff7675",
+            desc: "超舒適的新辦公空間與五星級豪華健身房，運動健檢福利滿滿。"
+        },
+        {
+            key: "vibe",
+            title: "☕ 氛圍與日常 (Vibe & Culture)",
+            color: "#a29bfe",
+            desc: "彈性自主的上下班時間、超歡樂的工作氛圍，還有能直接跟總經理暢聊的早午餐日常。"
+        }
+    ];
+
+    // 3. 生成各個主題的心聲卡片軌道
+    let themesHtml = `
+        <div style="margin-top: 40px; border-top: 1px solid #f1f2f6; padding-top: 20px;">
+            <h2 style="font-size: 1.6rem; color: #2d3436; text-align: center; margin-bottom: 10px; font-weight: bold;">📣 嘉人實習生真實心聲</h2>
+            <p style="text-align: center; color: #b2bec3; font-size: 0.95rem; margin-bottom: 30px;">（左右滑動卡片可瀏覽不同實習生的觀點心得）</p>
+        </div>
+    `;
+
+    themes.forEach(theme => {
+        // Filter interns belonging to this theme
+        const themeInterns = internsData.filter(i => i.theme === theme.key);
+
+        if (themeInterns.length > 0) {
+            themesHtml += `
+                <div class="theme-section">
+                    <h3 class="theme-section-title">
+                        <span style="color: ${theme.color};">${theme.title}</span>
+                    </h3>
+                    <p style="color: #b2bec3; font-size: 0.9rem; margin-top: -10px; margin-bottom: 15px; padding-left: 5px;">${theme.desc}</p>
+                    
+                    <div class="interns-track">
+            `;
+
+            themeInterns.forEach(intern => {
+                themesHtml += `
+                        <div class="intern-card" style="border-left-color: ${intern.themeColor};">
+                            <div>
+                                <!-- Card Header -->
+                                <div class="intern-card-header">
+                                    <div class="intern-avatar" style="background: ${intern.avatarBg};">${intern.avatarEmoji}</div>
+                                    <div class="intern-info">
+                                        <div class="intern-name-row">
+                                            <span class="intern-name">${intern.name}</span>
+                                            <span class="intern-badge" style="background-color: ${intern.themeColor};">${intern.dept}</span>
+                                        </div>
+                                        <span class="intern-school">${intern.school}</span>
+                                    </div>
+                                </div>
+                                
+                                <!-- Card Content -->
+                                <div class="intern-quote-box">
+                                    <p class="intern-quote">「${intern.quote}」</p>
+                                </div>
+                            </div>
+                        </div>
+                `;
+            });
+
+            themesHtml += `
+                    </div>
+                </div>
+            `;
+        }
+    });
+
+    // 4. 合併所有內容渲染至容器
+    container.innerHTML = `
+        <p class="interns-intro" style="margin-bottom: 40px;">
+            在嘉新，實習生是推動企業前進的真實力量。看看「嘉人計畫」的規劃，並聽聽實習生們最真實的第一視角分享。
+        </p>
+        ${programHtml}
+        ${themesHtml}
+        
+        <div style="text-align: center; margin-top: 40px; margin-bottom: 20px;">
+            <button onclick="navigateTo('story')" style="background: white; color: #a29bfe; border: 2px solid #a29bfe; padding: 12px 35px; border-radius: 30px; font-size: 1.1rem; cursor: pointer; font-weight: bold; transition: all 0.2s; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+                ← 返回嘉人視角
+            </button>
+        </div>
+    `;
 }
 
 // Handle closing the intro overlay
@@ -927,3 +1638,34 @@ function showResult() {
         </div>
     `;
 }
+
+function switchWomenLeaderTab(leaderId, tabName) {
+    // 1. Get the card container of the target leader
+    const activeContent = document.getElementById(`${leaderId}-${tabName}`);
+    if (!activeContent) return;
+    
+    const card = activeContent.closest('.leader-card, .gm-column-section');
+    if (!card) return;
+
+    // 2. Update active button styles
+    const buttons = card.querySelectorAll('.leader-tab-btn');
+    buttons.forEach(btn => {
+        if (btn.getAttribute('onclick').includes(tabName)) {
+            btn.classList.add('active');
+        } else {
+            btn.classList.remove('active');
+        }
+    });
+
+    // 3. Toggle content visibility with animation
+    const contents = card.querySelectorAll('.leader-tab-content');
+    contents.forEach(content => {
+        if (content.id === `${leaderId}-${tabName}`) {
+            content.classList.add('active');
+        } else {
+            content.classList.remove('active');
+        }
+    });
+}
+
+
