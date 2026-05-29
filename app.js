@@ -1227,14 +1227,21 @@ story_benefits: {
     }
 };
 
-// GA4 Custom Engagement Tracking variables (Precise Dwell Time)
+// GA4 Custom Engagement Tracking variables (Precise Dwell Time & 5s Threshold)
 let viewStartTime = null;
 let lastActiveView = null;
 let lastActiveTitle = null;
+let engagementTimer = null;
 
 function navigateTo(viewId) {
     const mapView = document.getElementById('map-view');
     const contentView = document.getElementById('content-view');
+
+    // Clear previous view's engagement timer
+    if (engagementTimer) {
+        clearTimeout(engagementTimer);
+        engagementTimer = null;
+    }
 
     // 1. Calculate and send dwell time for the PREVIOUS view before navigating away
     if (viewStartTime && lastActiveView && lastActiveView !== 'map') {
@@ -1299,6 +1306,16 @@ function navigateTo(viewId) {
             viewStartTime = Date.now();
             lastActiveView = viewId;
             lastActiveTitle = data.title;
+
+            // 2. Set a timer to check if user stays on this view for more than 5 seconds
+            engagementTimer = setTimeout(() => {
+                if (lastActiveView === viewId && typeof gtag === 'function') {
+                    gtag('event', 'feature_read_engaged', {
+                        'feature_name': viewId,
+                        'feature_title': data.title
+                    });
+                }
+            }, 5000);
         }
     }
 }
