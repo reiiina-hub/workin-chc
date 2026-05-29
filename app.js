@@ -1227,9 +1227,28 @@ story_benefits: {
     }
 };
 
+// GA4 Custom Engagement Tracking variables (Precise Dwell Time)
+let viewStartTime = null;
+let lastActiveView = null;
+let lastActiveTitle = null;
+
 function navigateTo(viewId) {
     const mapView = document.getElementById('map-view');
     const contentView = document.getElementById('content-view');
+
+    // 1. Calculate and send dwell time for the PREVIOUS view before navigating away
+    if (viewStartTime && lastActiveView && lastActiveView !== 'map') {
+        const durationSeconds = Math.round((Date.now() - viewStartTime) / 1000);
+        
+        // Track only if they stayed at least 1 second to avoid misclicks
+        if (durationSeconds >= 1 && typeof gtag === 'function') {
+            gtag('event', 'feature_dwell_time', {
+                'feature_name': lastActiveView,
+                'feature_title': lastActiveTitle,
+                'duration_seconds': durationSeconds
+            });
+        }
+    }
 
     if (viewId === 'map') {
         mapView.classList.add('active');
@@ -1240,6 +1259,11 @@ function navigateTo(viewId) {
         if (typeof gtag === 'function') {
             gtag('event', 'return_to_map');
         }
+
+        // Reset variables when returning to map
+        viewStartTime = null;
+        lastActiveView = null;
+        lastActiveTitle = null;
     } else {
         const data = mapData[viewId];
         if (data) {
@@ -1270,6 +1294,11 @@ function navigateTo(viewId) {
                     'feature_title': data.title
                 });
             }
+
+            // Start timing the current view
+            viewStartTime = Date.now();
+            lastActiveView = viewId;
+            lastActiveTitle = data.title;
         }
     }
 }
@@ -1667,5 +1696,58 @@ function switchWomenLeaderTab(leaderId, tabName) {
         }
     });
 }
+
+// ==========================================
+// GA4 External Links & Outbound Click Tracking
+// ==========================================
+document.addEventListener('click', function(e) {
+    const anchor = e.target.closest('a');
+    if (anchor && anchor.href) {
+        const url = anchor.href;
+        
+        // Track only external links (different hostname or not local)
+        if (!url.includes(window.location.hostname) && url.startsWith('http')) {
+            let linkType = 'other';
+            
+            // Classify links based on their domain
+            if (url.includes('facebook.com')) {
+                linkType = 'facebook';
+            } else if (url.includes('threads.net')) {
+                linkType = 'threads';
+            } else if (url.includes('instagram.com')) {
+                linkType = 'instagram';
+            } else if (url.includes('104.com.tw')) {
+                linkType = '104_job';
+            } else if (url.includes('apple.co') || url.includes('spotify.com') || url.includes('spoti.fi') || url.includes('soundon')) {
+                linkType = 'podcast';
+            }
+            
+            if (typeof gtag === 'function') {
+                gtag('event', 'click_external_link', {
+                    'link_url': url,
+                    'link_type': linkType,
+                    'link_text': anchor.innerText.trim() || anchor.title || 'icon_click'
+                });
+            }
+        }
+    }
+});
+
+// ==========================================
+// GA4 Tab Close / Visibility Change Tracking (Dwell Time Protection)
+// ==========================================
+window.addEventListener('visibilitychange', function() {
+    if (document.visibilityState === 'hidden' && viewStartTime && lastActiveView && lastActiveView !== 'map') {
+        const durationSeconds = Math.round((Date.now() - viewStartTime) / 1000);
+        if (durationSeconds >= 1 && typeof gtag === 'function') {
+            gtag('event', 'feature_dwell_time', {
+                'feature_name': lastActiveView,
+                'feature_title': lastActiveTitle,
+                'duration_seconds': durationSeconds
+            });
+        }
+        viewStartTime = null; // Reset to avoid double reporting
+    }
+});
 
 
