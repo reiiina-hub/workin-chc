@@ -1217,7 +1217,7 @@ story_benefits: {
                     <div class="social-summary">投資人與企業資訊</div>
                 </a>
                 
-                <a href="https://www.104.com.tw/company/5gonzzc?jobsource=google" target="_blank" class="social-card job104">
+                <a href="https://www.104.com.tw/company/5gonzzc?jobsource=google&from=social_portal" target="_blank" class="social-card job104">
                     <img src="assets/icon_104.png" alt="104人力資源" class="social-icon">
                     <div class="social-title">104 人力銀行</div>
                     <div class="social-summary">最新職缺與投遞</div>
@@ -1669,9 +1669,9 @@ function showResult() {
             </div>
             
             <div class="result-actions">
-                <button onclick="window.open('https://www.104.com.tw/company/5gonzzc?jobsource=google', '_blank')" class="quiz-start-btn" style="background-color: ${result.color}; border-color: ${result.color}; box-shadow: 0 4px 15px ${result.color}40;">
+                <a href="https://www.104.com.tw/company/5gonzzc?jobsource=google&from=quiz" target="_blank" class="quiz-start-btn" style="background-color: ${result.color}; border-color: ${result.color}; box-shadow: 0 4px 15px ${result.color}40; display: inline-block; text-decoration: none; text-align: center; color: white;">
                     查看最新職缺
-                </button>
+                </a>
                 <button onclick="renderQuizWelcome()" class="quiz-retry-btn">
                     ↻ 重新測驗
                 </button>
@@ -1734,7 +1734,12 @@ document.addEventListener('click', function(e) {
             } else if (url.includes('instagram.com')) {
                 linkType = 'instagram';
             } else if (url.includes('104.com.tw')) {
-                linkType = '104_job';
+                // Distinguish between Quiz 104 link and Social Portal 104 link
+                if (url.includes('from=quiz')) {
+                    linkType = '104_quiz';
+                } else {
+                    linkType = '104_social_portal';
+                }
             } else if (url.includes('apple.co') || url.includes('spotify.com') || url.includes('spoti.fi') || url.includes('soundon')) {
                 linkType = 'podcast';
             }
