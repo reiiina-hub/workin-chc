@@ -140,13 +140,14 @@ const mapData = {
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
                 <div class="placeholder-card" style="border-top: 5px solid #ff7675; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(255, 118, 117, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('story_women_leadership')">
                     <h2 style="color: #ff7675; margin-bottom: 10px;">在嘉裡，DEI 不是口號</h2>
+                    <p style="color: #636e72; line-height: 1.6; font-weight: bold; margin-bottom: 10px;">女力領導與多元共融</p>
                     <p style="color: #636e72; line-height: 1.6;">在嘉新，我們相信多元共融的力量。透過高比例女性決策者的引領與友善家庭政策的實踐，我們為每位同仁編織支持網，讓工作與生活能自在平衡。點擊探索嘉新如何將 DEI 融入日常。</p>
                     <div style="margin-top: 15px; font-weight: bold; color: #ff7675; text-align: right;">探索 DEI 實踐故事 ▶</div>
                 </div>
                 <div class="placeholder-card" style="border-top: 5px solid #74b9ff; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(116, 185, 255, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('story_care')">
                     <h2 style="color: #74b9ff; margin-bottom: 10px;">全面員工支持與關懷</h2>
                     <p style="color: #636e72; line-height: 1.6; font-weight: bold; margin-bottom: 10px;">360 度全方位福利</p>
-                    <p style="color: #636e72; line-height: 1.6;">從「日常彈性」、「身心健康」、「財富保障」到「生老病死」的全方位照顧。我們 offer 優於法規的假勤與各項補助，做為嘉人們最安心的後盾，打造工作與生活雙贏的幸福職場。</p>
+                    <p style="color: #636e72; line-height: 1.6;">從「日常彈性」、「身心健康」、「財富保障」到「生老病死」的全方位照顧。我們 offer 優於法規的給假與各項補助，做為嘉人們最安心的後盾，打造工作與生活雙贏的幸福職場。</p>
                     <div style="margin-top: 15px; font-weight: bold; color: #74b9ff; text-align: right;">探索完整福利 ▶</div>
                 </div>
                 <div class="placeholder-card" style="border-top: 5px solid #fdcb6e; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(253, 203, 110, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('story_benefits')">
@@ -158,7 +159,7 @@ const mapData = {
                 <div class="placeholder-card" style="border-top: 5px solid #a29bfe; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(162, 155, 254, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('story_interns')">
                     <h2 style="color: #a29bfe; margin-bottom: 10px;">嘉人計畫</h2>
                     <p style="color: #636e72; line-height: 1.6; font-weight: bold; margin-bottom: 10px;">實習生怎麼說</p>
-                    <p style="color: #636e72; line-height: 1.6;">聽聽在不同部門實習的年輕夥伴們，如何在嘉新獲得專業成長與溫慢支持。最真實的實習心得分享，帶你一窺嘉人的日常實習生活！</p>
+                    <p style="color: #636e72; line-height: 1.6;">聽聽在不同部門實習的年輕夥伴們，如何在嘉新獲得專業成長與溫暖支持。最真實的實習心得分享，帶你一窺嘉人的日常實習生活！</p>
                     <div style="margin-top: 15px; font-weight: bold; color: #a29bfe; text-align: right;">看看實習小檔案 ▶</div>
                 </div>
             </div>
@@ -412,7 +413,7 @@ const mapData = {
                             </div>
                             <div id="mandy-family" class="leader-tab-content">
                                 <p class="leader-content-p">
-                                    身為「好媳婦代表」的 Mandy，能輕鬆將家人照顧得妥妥當當，同時在稽核工作上展現專業。她特別感謝嘉新優於勞基法的假勤福利與彈性工時，讓她能在高壓工作與家庭生活間取得完美平衡。
+                                    身為「好媳婦代表」的 Mandy，能輕鬆將家人照顧得妥妥當當，同時在稽核工作上展現專業。她特別感謝嘉新優於勞基法的給假福利與彈性工時，讓她能在高壓工作與家庭生活間取得完美平衡。
                                 </p>
                             </div>
                         </div>
@@ -600,7 +601,7 @@ story_benefits: {
                             <li><b>彈性出勤：</b> 上班 07:30-09:30／下班 16:30-18:30。</li>
                             <li><b>遠距辦公：</b> 每月可申請 3 日。</li>
                             <li><b>節慶小確幸：</b> 重要節日前半天提早下班。</li>
-                            <li><b>專屬假勤：</b> 新人假（通過試用期即享 2 日）、生日假（當月半日）、志工假（每年 6 天）。</li>
+                            <li><b>專屬給假：</b> 新人假（通過試用期即享 2 日）、生日假（當月半日）、志工假（每年 6 天）。</li>
                         </ul>
                     </div>
 
@@ -805,9 +806,8 @@ story_benefits: {
 
                 <!-- 支柱一：深耕教育與情緒陪伴 (左圖右文) -->
                 <div style="display: flex; flex-wrap: wrap; margin-bottom: 40px; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                    <div style="flex: 1; min-width: 300px; background: #fdfbf7; padding: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid #f1f2f6;">
-                        <div style="width: 80px; height: 80px; border-radius: 50%; background: #ffeaa7; display: flex; justify-content: center; align-items: center; font-size: 2rem; margin-bottom: 15px;">📚</div>
-                        <div style="color: #b2bec3; font-size: 0.9rem;">圖片佔位區</div>
+                    <div style="flex: 1; min-width: 300px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; border-right: 1px solid #f1f2f6;">
+                        <img src="assets/20250830_嘉新獎學金頒獎典禮298s_熊愛攝影-1536x1024.jpg" alt="嘉新兆福文化基金會獎學金頒獎典禮" style="width: 100%; height: 100%; object-fit: cover; min-height: 280px; display: block;">
                     </div>
                     <div style="flex: 2; min-width: 300px; padding: 40px;">
                         <h2 style="color: #f39c12; font-size: 1.6rem; margin-bottom: 15px;">深耕教育與情緒陪伴</h2>
@@ -818,9 +818,8 @@ story_benefits: {
 
                 <!-- 支柱二：由內而外的志工文化 (右圖左文) -->
                 <div style="display: flex; flex-wrap: wrap; flex-direction: row-reverse; margin-bottom: 40px; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                    <div style="flex: 1; min-width: 300px; background: #fdfbf7; padding: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-left: 1px solid #f1f2f6;">
-                        <div style="width: 80px; height: 80px; border-radius: 50%; background: #fab1a0; display: flex; justify-content: center; align-items: center; font-size: 2rem; margin-bottom: 15px;">🤝</div>
-                        <div style="color: #b2bec3; font-size: 0.9rem;">圖片佔位區</div>
+                    <div style="flex: 1; min-width: 300px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; border-left: 1px solid #f1f2f6;">
+                        <img src="assets/正向大人.jpg" alt="正向大人陪伴計畫" style="width: 100%; height: 100%; object-fit: cover; min-height: 280px; display: block;">
                     </div>
                     <div style="flex: 2; min-width: 300px; padding: 40px;">
                         <h2 style="color: #f39c12; font-size: 1.6rem; margin-bottom: 15px;">由內而外的志工陪伴文化</h2>
@@ -831,9 +830,8 @@ story_benefits: {
 
                 <!-- 支柱三：文化傳承與健康生活 (左圖右文) -->
                 <div style="display: flex; flex-wrap: wrap; margin-bottom: 50px; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
-                    <div style="flex: 1; min-width: 300px; background: #fdfbf7; padding: 40px; display: flex; flex-direction: column; justify-content: center; align-items: center; border-right: 1px solid #f1f2f6;">
-                        <div style="width: 80px; height: 80px; border-radius: 50%; background: #55efc4; display: flex; justify-content: center; align-items: center; font-size: 2rem; margin-bottom: 15px;">🏛️</div>
-                        <div style="color: #b2bec3; font-size: 0.9rem;">圖片佔位區</div>
+                    <div style="flex: 1; min-width: 300px; position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; border-right: 1px solid #f1f2f6;">
+                        <img src="assets/沖繩工藝.jpg" alt="沖繩傳統工藝展示" style="width: 100%; height: 100%; object-fit: cover; min-height: 280px; display: block;">
                     </div>
                     <div style="flex: 2; min-width: 300px; padding: 40px;">
                         <h2 style="color: #f39c12; font-size: 1.6rem; margin-bottom: 15px;">文化傳承與健康空間營造</h2>
