@@ -51,7 +51,7 @@ const internsData = [
         id: "amber",
         name: "Amber",
         dept: "永續發展辦公室",
-        school: "[實習生]",
+        school: "台科工管系",
         quote: "最驚訝的是實習生有真正被賦權的空間——提出的想法有被實踐的可能，不只是打雜。也沒想到公司有羽球社，跨部門互動讓我每週一都期待去打球。核心感受是『被認真看待』。",
         date: "2023/12/01",
         theme: "empowerment",
@@ -63,7 +63,7 @@ const internsData = [
         id: "mike",
         name: "Mike",
         dept: "永續發展辦公室",
-        school: "[實習生]",
+        school: "政大外交所",
         quote: "從完全看不懂永續報告書的新手，成長到可以上台報告。我特別珍惜每次簡報機會，連以前猶豫要不要報名歌唱比賽的緊張感，都在這些『被撐住』的時刻化為力量，發現自己不同的能耐！",
         date: "2023/12/01",
         theme: "growth",
@@ -75,7 +75,7 @@ const internsData = [
         id: "carol",
         name: "Carol",
         dept: "策略經營處",
-        school: "[實習生]",
+        school: "台科財金所",
         quote: "帶著對傳產的刻板印象進來，實際卻發現氛圍超友善、彈性上下班，還有高級健身房！印象最深的是『總經理早午餐』——能直接跟總經理對談，感受到被真誠對待，而非只是個實習生。",
         date: "2023/12/01",
         theme: "vibe",
@@ -85,21 +85,21 @@ const internsData = [
     },
     {
         id: "chenghan",
-        name: "李承翰",
+        name: "Sam",
         dept: "稽核室",
-        school: "[實習生]",
+        school: "東吳資管系",
         quote: "主管給予高度自主性，讓我自己決定如何達成目標。我用程式能力實際加速了稽核流程，還設計了視覺化圖表與稽核平台。這段經歷不只提升技術，也讓我更確立了未來方向！",
         date: "2023/12/01",
         theme: "empowerment",
         themeColor: "#9b59b6",
         avatarEmoji: "💻",
-                avatarBg: "linear-gradient(135deg, #dec0f1, #9b59b6)"
+        avatarBg: "linear-gradient(135deg, #dec0f1, #9b59b6)"
     },
     {
         id: "angel",
         name: "Angel",
         dept: "總務部",
-        school: "[實習生]",
+        school: "輔大日文系",
         quote: "一開始覺得總務的事務不起眼，後來體悟到『像一顆螺絲，無論大小都有其重要性』。主管與同事在我需要簡報報告時，給予大量練習陪伴，讓我感受到努力真的有被看見！",
         date: "2023/12/01",
         theme: "empowerment",
@@ -109,9 +109,9 @@ const internsData = [
     },
     {
         id: "tingwei",
-        name: "葉庭維",
+        name: "David",
         dept: "資訊處",
-        school: "[實習生]",
+        school: "致理資管系",
         quote: "在 Eric 的帶領下從陌生到上手，第一次執行設備維修時獲得團隊充分支持與引導，緊張感瞬間被溫暖化解。團隊的細心與溫馨讓我更有信心面對新挑戰！",
         date: "2023/12/01",
         theme: "growth",
@@ -121,9 +121,9 @@ const internsData = [
     },
     {
         id: "yujie",
-        name: "陳語婕",
+        name: "Jamie",
         dept: "人力資源處",
-        school: "[實習生]",
+        school: "銘傳國企系",
         quote: "沒想到自己一個人可以完成那麼多活動策劃（實習生分享會、執行長下午茶、萬聖節活動等）。主管給我框架內的高度彈性，讓我感受到自己是『團隊裡重要的一員』，而非只是普通小實習生！",
         date: "2023/12/01",
         theme: "empowerment",
@@ -198,7 +198,7 @@ const mapData = {
                             <div class="leader-avatar">🧗‍♀️</div>
                             <div class="leader-info">
                                 <div class="leader-name-row">
-                                    <span class="leader-name">王立心 Liz</span>
+                                    <span class="leader-name">Liz</span>
                                     <span class="leader-dept">總經理</span>
                                 </div>
                                 <span class="leader-nickname">#嘉新極限體能王</span>
@@ -236,7 +236,7 @@ const mapData = {
                                 <div style="font-size: 1.8rem; margin-right: 12px; filter: drop-shadow(0 2px 5px rgba(255, 118, 117, 0.15));">🎥</div>
                                 <div style="flex-grow: 1;">
                                     <div style="font-weight: bold; font-size: 0.95rem; color: #d63031;">與軒軒講 EP 26 專訪影音 ↗</div>
-                                    <div style="font-size: 0.8rem; color: #636e72; margin-top: 2px;">王立心 Liz 暢談女性領導力與生活哲學</div>
+                                    <div style="font-size: 0.8rem; color: #636e72; margin-top: 2px;">Liz 暢談女性領導力與生活哲學</div>
                                 </div>
                             </a>
                             
@@ -285,7 +285,7 @@ const mapData = {
                             <div class="leader-avatar">🌸</div>
                             <div class="leader-info">
                                 <div class="leader-name-row">
-                                    <span class="leader-name">陳文婉 Jennifer</span>
+                                    <span class="leader-name">Jennifer</span>
                                     <span class="leader-dept">人力資源處</span>
                                 </div>
                                 <span class="leader-nickname">#嘉新凍齡高手</span>
@@ -320,7 +320,7 @@ const mapData = {
                             <div class="leader-avatar">🍳</div>
                             <div class="leader-info">
                                 <div class="leader-name-row">
-                                    <span class="leader-name">周月珍 Jane</span>
+                                    <span class="leader-name">Jane</span>
                                     <span class="leader-dept">財務處</span>
                                 </div>
                                 <span class="leader-nickname">#嘉新愛心名廚</span>
@@ -355,7 +355,7 @@ const mapData = {
                             <div class="leader-avatar">👟</div>
                             <div class="leader-info">
                                 <div class="leader-name-row">
-                                    <span class="leader-name">余曉芸</span>
+                                    <span class="leader-name">Sharing</span>
                                     <span class="leader-dept">總管理處</span>
                                 </div>
                                 <span class="leader-nickname">#青春系學姐</span>
@@ -378,7 +378,7 @@ const mapData = {
                             </div>
                             <div id="xiaoyun-family" class="leader-tab-content">
                                 <p class="leader-content-p">
-                                    充滿朝氣與活力的曉芸，是同仁眼中的「青春系學姐」。她維持身心靈健康與體態的秘訣，就是每週在嘉新大樓的五星級健身房 #fitcollective 重訓揮汗，用自律和運動活出精彩飽滿的個人生活。
+                                    充滿朝氣與活力的Sharing，是同仁眼中的「青春系學姐」。她維持身心靈健康與體態的秘訣，就是每週在嘉新大樓的五星級健身房 #fitcollective 重訓揮汗，用自律和運動活出精彩飽滿的個人生活。
                                 </p>
                             </div>
                         </div>
@@ -390,7 +390,7 @@ const mapData = {
                             <div class="leader-avatar">🏡</div>
                             <div class="leader-info">
                                 <div class="leader-name-row">
-                                    <span class="leader-name">洪美玲 Mandy</span>
+                                    <span class="leader-name">Mandy</span>
                                     <span class="leader-dept">稽核室</span>
                                 </div>
                                 <span class="leader-nickname">#嘉新好媳婦代表</span>
@@ -435,7 +435,7 @@ const mapData = {
                                 <div class="testimonial-header">
                                     <div class="testimonial-avatar">🌸</div>
                                     <div class="testimonial-info">
-                                        <span class="testimonial-name">菱真</span>
+                                        <span class="testimonial-name">Annie</span>
                                         <span class="testimonial-dept">財務處</span>
                                     </div>
                                 </div>
@@ -455,7 +455,7 @@ const mapData = {
                                 <div class="testimonial-header">
                                     <div class="testimonial-avatar">📁</div>
                                     <div class="testimonial-info">
-                                        <span class="testimonial-name">茹蘭</span>
+                                        <span class="testimonial-name">Nancy</span>
                                         <span class="testimonial-dept">董秘室</span>
                                     </div>
                                 </div>
@@ -475,7 +475,7 @@ const mapData = {
                                 <div class="testimonial-header">
                                     <div class="testimonial-avatar">🍼</div>
                                     <div class="testimonial-info">
-                                        <span class="testimonial-name">伯謙</span>
+                                        <span class="testimonial-name">Max</span>
                                         <span class="testimonial-dept">策略經營處</span>
                                     </div>
                                 </div>
@@ -495,7 +495,7 @@ const mapData = {
                                 <div class="testimonial-header">
                                     <div class="testimonial-avatar">⚖️</div>
                                     <div class="testimonial-info">
-                                        <span class="testimonial-name">以炘</span>
+                                        <span class="testimonial-name">Nicy</span>
                                         <span class="testimonial-dept">法務處</span>
                                     </div>
                                 </div>
@@ -520,7 +520,7 @@ const mapData = {
             </div>
         `
     },
-story_benefits: {
+    story_benefits: {
         title: "生活由我定義 🛋️",
         content: `
             <div style="max-width: 600px; margin: 0 auto; padding-bottom: 40px; display: flex; flex-direction: column; gap: 25px;">
@@ -546,24 +546,6 @@ story_benefits: {
                 <!-- Card 2 -->
                 <div style="background: white; border-radius: 15px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #f1f2f6;">
                     <div style="display: flex; align-items: center; margin-bottom: 15px;">
-                        <div style="width: 50px; height: 50px; border-radius: 50%; background: #81ecec; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-right: 15px;">👨🏽‍💻</div>
-                        <div>
-                            <div style="font-weight: bold; color: #2d3436; font-size: 1.1rem;">嘉人 C 先生</div>
-                            <div style="color: #b2bec3; font-size: 0.9rem;">5 小時前</div>
-                        </div>
-                    </div>
-                    <div style="margin-bottom: 15px;">
-                        <h3 style="color: #00cec9; margin-bottom: 10px; font-size: 1.3rem;">✨ 補班日免進辦公室 ╳ 重要節日前一天彈性下班</h3>
-                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem;">別人補班心酸酸，嘉人躺平好舒坦～ 🏖️<br>補班日免進公司，好好生活快樂滿分！<br><br>節日前一天，下午自由下班去，<br>提前開啟放假模式，返鄉出遊不塞車 🚗</p>
-                    </div>
-                    <div style="color: #0984e3; font-weight: bold; font-size: 0.95rem;">
-                        #嘉新以人為本 #放假總是快一步
-                    </div>
-                </div>
-
-                <!-- Card 3 -->
-                <div style="background: white; border-radius: 15px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #f1f2f6;">
-                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
                         <div style="width: 50px; height: 50px; border-radius: 50%; background: #a29bfe; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-right: 15px;">🙋🏻‍♂️</div>
                         <div>
                             <div style="font-weight: bold; color: #2d3436; font-size: 1.1rem;">嘉人 W 先生</div>
@@ -576,6 +558,24 @@ story_benefits: {
                     </div>
                     <div style="color: #0984e3; font-weight: bold; font-size: 0.95rem;">
                         #新人禮包解鎖 #生日好好放個假
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div style="background: white; border-radius: 15px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border: 1px solid #f1f2f6;">
+                    <div style="display: flex; align-items: center; margin-bottom: 15px;">
+                        <div style="width: 50px; height: 50px; border-radius: 50%; background: #81ecec; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-right: 15px;">👨🏽‍💻</div>
+                        <div>
+                            <div style="font-weight: bold; color: #2d3436; font-size: 1.1rem;">嘉人 C 先生</div>
+                            <div style="color: #b2bec3; font-size: 0.9rem;">5 小時前</div>
+                        </div>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <h3 style="color: #00cec9; margin-bottom: 10px; font-size: 1.3rem;">✨ 補班日免進辦公室 ╳ 重要節日前一天彈性下班</h3>
+                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem;">別人補班心酸酸，嘉人躺平好舒坦～ 🏖️<br>補班日免進公司，好好生活快樂滿分！<br><br>節日前一天，下午自由下班去，<br>提前開啟放假模式，返鄉出遊不塞車 🚗</p>
+                    </div>
+                    <div style="color: #0984e3; font-weight: bold; font-size: 0.95rem;">
+                        #嘉新以人為本 #放假總是快一步
                     </div>
                 </div>
 
@@ -667,17 +667,17 @@ story_benefits: {
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
                 <div class="placeholder-card" style="border-top: 5px solid #2ecc71; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(46, 204, 113, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('esg_e')">
                     <h2 style="color: #2ecc71; margin-bottom: 10px;">E 環境共好</h2>
-                    <p style="color: #636e72; line-height: 1.6;">嘉新致力於與自然和諧共存，透過導入綠能與先進的環保科技，實踐節能減碳的承諾。點擊探索我們如何結合科技與環保，創造永續的綠色典範。</p>
+                    <p style="color: #636e72; line-height: 1.6;">嘉新致力於與自然和諧共存，以節能減碳為核心，推動低碳物流與建物綠化，並在岡山基地實踐屋頂型太陽能與 TNFD 規劃。點擊探索我們如何結合科技與生態，創造永續的綠色典範。</p>
                     <div style="margin-top: 15px; font-weight: bold; color: #2ecc71; text-align: right;">探索環境故事 ▶</div>
                 </div>
                 <div class="placeholder-card" style="border-top: 5px solid #f39c12; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(243, 156, 18, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('esg_s')">
                     <h2 style="color: #f39c12; margin-bottom: 10px;">S 社會共榮</h2>
-                    <p style="color: #636e72; line-height: 1.6;">我們深信企業必須回饋社會。透過長期投入教育資源與危機時刻的在地送暖，嘉新將關懷化為實際行動。點擊了解那些改變社會的動人故事。</p>
+                    <p style="color: #636e72; line-height: 1.6;">我們深信，企業的成功在於與社會一同前行。嘉新以「人」為核心，深耕教育與陪伴，推動由內而外的員工志工文化，並將健康與文化傳承融入營運。不只單向給予，更在長期的陪伴中與社會共同成長、攜手共榮。</p>
                     <div style="margin-top: 15px; font-weight: bold; color: #f39c12; text-align: right;">探索社會故事 ▶</div>
                 </div>
                 <div class="placeholder-card" style="border-top: 5px solid #3498db; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(52, 152, 219, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('esg_g')">
                     <h2 style="color: #3498db; margin-bottom: 10px;">G 透明治理</h2>
-                    <p style="color: #636e72; line-height: 1.6;">透明的溝通與責任是我們治理的核心。從高層主管的「公開認錯」到 ESG 目標的直接掛鉤，我們堅持「玩真的」。點擊查看我們的治理之道。</p>
+                    <p style="color: #636e72; line-height: 1.6;">我們深信，誠信與透明的治理是企業永續的基石。嘉新建立由上而下的治理架構，主動接軌 SBTi 科學減碳與 TCFD 氣候揭露等國際標準，並將永續指標轉化為企業的長期商業價值與核心競爭力。</p>
                     <div style="margin-top: 15px; font-weight: bold; color: #3498db; text-align: right;">探索治理故事 ▶</div>
                 </div>
             </div>
@@ -719,21 +719,30 @@ story_benefits: {
                     </div>
                 </div>
 
-                <!-- 太陽能與生態共存 -->
+                <!-- 岡山基地植相盤點與 TNFD -->
                 <div style="margin-bottom: 30px; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
                     <div style="padding: 30px;">
-                        <h2 style="color: #2ecc71; font-size: 1.8rem; margin-bottom: 15px;">☀️ 空間再利用與低衝擊綠能：阿公店水庫</h2>
-                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem;">相較於大規模開發綠地設置太陽能板，嘉新的方向更偏向既有空間再利用與低衝擊改造。以岡山基地周邊為例，鄰近的阿公店水庫是台灣重要的水域型太陽能示範場域。該區系統採浮力式設計，不需大量破壞土地植被，僅占水庫面積約 3.5%。</p>
-                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-top: 10px;">水面型太陽能還具有降低水分蒸發、減少藻類增生等優點，這反映出我們對永續能源的重要理念。</p>
+                        <h2 style="color: #2ecc71; font-size: 1.8rem; margin-bottom: 15px;">🌿 岡山基地植相盤點與簡易 TNFD 前瞻規劃</h2>
+                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 15px;">岡山基地周邊植相呈現低海拔次生林、草生地與既有園藝植栽混合的環境特徵。現地可見構樹、茄苳、苦楝、台灣欒樹、雀榕、稜果榕、榕樹、姑婆芋、血桐、無患子、芒草、相思樹等台灣低海拔常見原生或本土化植物，顯示基地周邊仍具備一定程度的在地生態基礎與自然演替潛力。</p>
+                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 0;">依簡易 TNFD 架構初步辨識，岡山基地的自然資本重點不在於大型原始森林，而是低海拔次生林加上一些人為引進的植物。這些區域可提供鳥類、蝶類、授粉昆蟲及小型生物覓食、停棲與遷移節點。未來若能以原生樹種補植、外來園藝種控管、草地低干擾管理與基地邊界綠帶串聯為方向，可逐步由「維持綠化」提升至「自然資本管理」。</p>
                     </div>
                 </div>
 
-                <!-- TNFD 與生物多樣性 -->
+                <!-- 原生種保留與外來園藝種管理 -->
                 <div style="margin-bottom: 30px; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
                     <div style="padding: 30px;">
-                        <h2 style="color: #2ecc71; font-size: 1.8rem; margin-bottom: 15px;">🦋 生物多樣性潛力與 TNFD 前瞻規劃</h2>
-                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 15px;">阿公店水庫不僅是綠能示範場域，其集水區涵蓋水域、低海拔次生林與草生地，更具備支持多元生態的複合型棲地特徵。周邊的生態池與水岸綠帶，已成為森林性鳥類、兩棲類與水域生物的潛在棲息地。</p>
-                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 15px;">為了進一步提升區域生態韌性與自然碳匯，我們正評估導入如九芎、台灣海棗等原生樹種，進行棲地連結與增匯型植群經營。從「低衝擊」邁向「積極復育」，這正是我們響應 TNFD 自然資本管理的長期承諾。</p>
+                        <h2 style="color: #2ecc71; font-size: 1.8rem; margin-bottom: 15px;">🦋 原生種保留與外來園藝種管理</h2>
+                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 15px;">本區具代表性的原生與在地風土植物包括台灣欒樹、茄苳、構樹、苦楝、雀榕、稜果榕、榕樹、姑婆芋、血桐、無患子、山芙蓉、光臘樹、盤龍木、皮孫木、潺槁樹與芒草等。這些植物多具有低海拔適應性強、耐乾旱或耐擾動、可提供果實與棲地資源等特性，適合作為岡山基地後續生態復育與綠帶營造的優先物種。</p>
+                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 0;">相較之下列，阿勃勒、黃金風鈴木、火焰木、馬拉巴栗、小葉欖仁、朱槿、椰子、龍船花等多屬外來或園藝栽培植物，雖具景觀與遮蔭功能，但較不宜作為生物多樣性提升的主軸。後續規劃可採「保留既有大樹、優先補植原生種、逐步降低外來園藝種比例」的方式，讓基地綠化從視覺景觀轉向具生態功能的棲地營造。</p>
+                    </div>
+                </div>
+
+                <!-- 空間再利用與低衝擊綠能：岡山基地屋頂型太陽能 -->
+                <div style="margin-bottom: 30px; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
+                    <div style="padding: 30px;">
+                        <h2 style="color: #2ecc71; font-size: 1.8rem; margin-bottom: 15px;">☀️ 空間再利用與低衝擊綠能：岡山基地屋頂型太陽能</h2>
+                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 15px;">相較於開發綠地設置太陽能板，岡山基地的太陽能規劃可聚焦於既有屋頂與建體上方空間再利用。透過將太陽能系統設置於廠房、倉儲或既有建築物屋頂，可避免額外占用草生地、樹叢與基地邊界綠帶，降低對現地植被、土壤透水性與生物棲地的干擾。</p>
+                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 0;">此作法兼具能源轉型與自然保育效益：一方面提升既有建築空間的能源產出效率，回應低碳營運與再生能源使用；另一方面也保留基地內可供原生植栽復育、生態綠帶串聯與雨水入滲的地面空間。對岡山基地而言，屋頂型太陽能可被定位為「不新增土地開發壓力的低衝擊綠能方案」，與 TNFD 所強調的自然資本風險管理方向相互呼應。</p>
                     </div>
                 </div>
 
@@ -926,7 +935,7 @@ story_benefits: {
                     <div style="background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
                         <div style="font-size: 2.5rem; margin-bottom: 15px;">🛡️</div>
                         <h4 style="color: #00838f; font-size: 1.2rem; margin-bottom: 15px;">未來氣候風險控管</h4>
-                        <p style="color: #636e72; font-size: 1rem; line-height: 1.6; text-align: justify; margin: 0;"><strong>阿公店水庫與 TNFD</strong><br>整合碳管理與生態復育，發展自然解方（NbS），這不僅是環保議題，更是因應未來供應鏈與資本市場要求的風險管理利器。</p>
+                        <p style="color: #636e72; font-size: 1rem; line-height: 1.6; text-align: justify; margin: 0;"><strong>TNFD（自然相關財務揭露）</strong><br>整合碳管理與生態復育，發展自然解方（NbS），這不僅是環保議題，更是因應未來供應鏈與資本市場要求的風險管理利器。</p>
                     </div>
                 </div>
 
@@ -951,15 +960,14 @@ story_benefits: {
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
                 <div class="placeholder-card" style="border-top: 5px solid #8e44ad; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(142, 68, 173, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('story_scene_1')">
                     <h2 style="color: #8e44ad; margin-bottom: 10px;">城市韌性｜築起跨越半世紀的底氣</h2>
-                    <p style="color: #636e72; line-height: 1.6;">從 1954 年的第一袋五洲牌水泥開始，我們就與台灣的土地同生共息。我們深知，高品質的生活必須建立在最穩固的基礎之上。嘉新從水泥起家，現在更透過資產開發賦予舊空間新生命。這不只是建築的翻新，而是對城市韌性的承諾——讓老舊的靈魂長出新生的質感，為永續生活築起第一道防線。</p>
-                    <div style="background: rgba(142, 68, 173, 0.05); padding: 15px; border-left: 4px solid #8e44ad; border-radius: 4px; margin-top: 15px;">
+                    <p style="color: #636e72; line-height: 1.6;">從1954年的第一袋五洲牌水泥開始,我們就與台灣的土地同生共息。嘉新從水泥起家,透過賦予舊空間新生命――讓老舊的靈魂長出新生的質感,為永續生活築第一道防線。</p>
                         <p style="color: #8e44ad; font-size: 1.05rem; font-weight: bold; margin: 0; font-style: italic;">「穩定，是 Quality of Life 最堅毅的基石。」</p>
                     </div>
                     <div style="margin-top: 15px; font-weight: bold; color: #8e44ad; text-align: right;">探索故事 ▶</div>
                 </div>
                 <div class="placeholder-card" style="border-top: 5px solid #d35400; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(211, 84, 0, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('story_scene_2')">
                     <h2 style="color: #d35400; margin-bottom: 10px;">優雅旅宿｜在異地找回生活的留白</h2>
-                    <p style="color: #636e72; line-height: 1.6;">如果生活是一場長跑，旅宿就是一段優雅的留白。嘉新跨越產業邊界，將對建築的嚴謹轉化為精緻服務的藝術。無論是沖繩 Hotel Collective 的南國熱情，還是中山大樓的摩登轉身，我們在每一個細節處雕琢「家」的溫度。讓旅行不再只是移動，而是一次感官的洗禮，找回失落已久的生活節奏。</p>
+                    <p style="color: #636e72; line-height: 1.6;">如果生活是一場長跑,旅宿就是一段優雅的留白。嘉新跨越產業邊界,將對建築的嚴謹轉化為精緻服務的藝術。我們在每一個細節處雕琢「家」的溫度。讓旅行不再只是移動,而是一次感官的洗禮。</p>
                     <div style="background: rgba(211, 84, 0, 0.05); padding: 15px; border-left: 4px solid #d35400; border-radius: 4px; margin-top: 15px;">
                         <p style="color: #d35400; font-size: 1.05rem; font-weight: bold; margin: 0; font-style: italic;">「優雅，是 Quality of Life 最細膩的感官體驗。」</p>
                     </div>
@@ -967,7 +975,7 @@ story_benefits: {
                 </div>
                 <div class="placeholder-card" style="border-top: 5px solid #16a085; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(22, 160, 133, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('story_scene_3')">
                     <h2 style="color: #16a085; margin-bottom: 10px;">細膩醫養｜守護生命中最溫柔的時刻</h2>
-                    <p style="color: #636e72; line-height: 1.6;">高品質的生活，應該在生命的每一個轉折點都得到尊嚴的對待。從「人之初」產後護理之家的細膩呵護，到全齡照護的策略佈局，我們將醫療專業化作隱形的守護力量。嘉新讓專業退到幕後，將溫暖推向第一線，陪伴你在最脆弱也最神聖的時刻，感受被悉心照料的幸福。</p>
+                    <p style="color: #636e72; line-height: 1.6;">高品質的生活,應該在生命的每一個轉折點都得到尊嚴的對待。從產後護理之家到全齡照護的策略布局,我們將醫療專業化作隱形的守護力量，在最脆弱也最神聖的時刻,讓您感受被悉心照料的幸福。</p>
                     <div style="background: rgba(22, 160, 133, 0.05); padding: 15px; border-left: 4px solid #16a085; border-radius: 4px; margin-top: 15px;">
                         <p style="color: #16a085; font-size: 1.05rem; font-weight: bold; margin: 0; font-style: italic;">「健康，是 Quality of Life 最深刻的溫柔關懷。」</p>
                     </div>
@@ -977,8 +985,11 @@ story_benefits: {
         `
     },
     story_scene_1: {
-        title: "城市韌性 🏙️",
+        title: "城市韌性｜築起跨越半世紀的底氣 🏙️",
         content: `
+            <div style="max-width: 800px; margin: 0 auto 30px auto; padding: 25px 30px; background: #fbf5fc; border-left: 5px solid #8e44ad; border-radius: 8px; font-size: 1.1rem; line-height: 1.8; color: #455a64; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+                從台灣第一家純民營水泥廠出發，嘉新一路走到資產管理、物流與多元事業體，每一次轉型，都是一次重新出發。讓我們一同穿梭時空，回到那些改變嘉新命運的關鍵時刻。
+            </div>
             <div class="timeline-container">
                 <div class="timeline-item">
                     <div class="timeline-dot" style="border-color: #8e44ad; box-shadow: 0 0 0 6px rgba(142, 68, 173, 0.15);"></div>
@@ -1033,7 +1044,7 @@ story_benefits: {
                     <div class="timeline-item-content">
                         <div class="timeline-year" style="color: #fdcb6e;">2006年</div>
                         <div class="timeline-title">制霸港口物流</div>
-                        <p class="timeline-text">嘉新跨足港口儲運，斥資新台幣25億餘元蓋了台北港第一散貨中心，並非常前衛地採用了「全密閉式環保裝卸設施」，水泥大亨搖身一變成為兼顧環保的港口物流巨頭。</p>
+                        <p class="timeline-text">嘉新跨足港口儲運，斥資新台幣25億餘元蓋了台北港第一散雜貨中心，並非常前衛地採用了「全密閉式環保裝卸設施」，水泥大亨搖身一變成為兼顧環保的港口物流巨頭。</p>
                         <img src="assets/港口物流.jpg" alt="2006年 制霸港口物流">
                     </div>
                 </div>
@@ -1056,8 +1067,11 @@ story_benefits: {
         `
     },
     story_scene_2: {
-        title: "優雅旅宿 🏨",
+        title: "優雅旅宿｜在異地找回生活的留白 🏨",
         content: `
+            <div style="max-width: 800px; margin: 0 auto 30px auto; padding: 25px 30px; background: #fff8f5; border-left: 5px solid #d35400; border-radius: 8px; font-size: 1.1rem; line-height: 1.8; color: #455a64; box-shadow: 0 4px 15px rgba(0,0,0,0.03);">
+                從一間羅馬飯店開始，到沖繩的自有品牌誕生，嘉新在不同城市之間，慢慢摸索出旅宿的下一種可能。讓我們一同走進時間軸，看見這段國際旅宿的起點與延伸。
+            </div>
             <div class="timeline-container">
                 <div class="timeline-item">
                     <div class="timeline-dot" style="border-color: #d35400; box-shadow: 0 0 0 6px rgba(211, 84, 0, 0.15);"></div>
@@ -1098,7 +1112,7 @@ story_benefits: {
         `
     },
     story_scene_3: {
-        title: "細膩醫養 🏥",
+        title: "細膩醫養｜守護生命中最溫柔的時刻 🏥",
         content: `
             <div style="max-width: 900px; margin: 0 auto; padding-bottom: 40px;">
                 
@@ -1170,7 +1184,7 @@ story_benefits: {
                                 <p style="font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px; text-align: left;">集結館內外專家觀點，從孕期、產後恢復到育兒、婚姻與女性健康，透過深入淺出的對談陪伴女性。</p>
                                 <div style="display: flex; flex-direction: column; gap: 8px; width: 100%;">
                                     <a href="https://apple.co/44ePl9g" target="_blank" style="background: #f1f2f6; padding: 6px; border-radius: 6px; color: #2c3e50; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: background 0.2s;">🍎 Apple Podcast</a>
-                                    <a href="https://spoti.fi/42ZvSbr" target="_blank" style="background: #f1f2f6; padding: 6px; border-radius: 6px; color: #2c3e50; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: background 0.2s;">🎧 Spotify</a>
+                                    <a href="https://open.spotify.com/show/03Mlj39cZNzgU4oKXbYJU1?si=e68329cc3b384560" target="_blank" style="background: #f1f2f6; padding: 6px; border-radius: 6px; color: #2c3e50; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: background 0.2s;">🎧 Spotify</a>
                                     <a href="https://bit.ly/441nhGH" target="_blank" style="background: #f1f2f6; padding: 6px; border-radius: 6px; color: #2c3e50; text-decoration: none; font-weight: bold; font-size: 0.9rem; transition: background 0.2s;">🎵 SoundOn</a>
                                 </div>
                             </div>
@@ -1212,7 +1226,7 @@ story_benefits: {
                 <a href="https://www.chcgroup.com.tw/" target="_blank" class="social-card website">
                     <img src="assets/icon_chc.png" alt="嘉新官網" class="social-icon">
                     <div class="social-title">嘉新官網</div>
-                    <div class="social-summary">投資人與企業資訊</div>
+                    <div class="social-summary">完整官方資訊</div>
                 </a>
                 
                 <a href="https://www.104.com.tw/company/5gonzzc?jobsource=google&from=social_portal" target="_blank" class="social-card job104">
@@ -1244,7 +1258,7 @@ function navigateTo(viewId) {
     // 1. Calculate and send dwell time for the PREVIOUS view before navigating away
     if (viewStartTime && lastActiveView && lastActiveView !== 'map') {
         const durationSeconds = Math.round((Date.now() - viewStartTime) / 1000);
-        
+
         // Track only if they stayed at least 1 second to avoid misclicks
         if (durationSeconds >= 1 && typeof gtag === 'function') {
             gtag('event', 'feature_dwell_time', {
@@ -1543,51 +1557,83 @@ function closeIntro() {
 // ==========================================
 // Quiz Logic (Native JS)
 // ==========================================
-let currentQuestionIndex = 0;
-let userScores = { A: 0, B: 0, C: 0, D: 0 };
+const QUIZ_ICONS = {
+  Target: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>`,
+  ShieldCheck: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>`,
+  Users: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+  Rocket: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 3.4-2 3.4s2.14-.5 3.4-2c1.26-1.5 2-3.4 2-3.4s-2.14.5-3.4 2Z"/><path d="M12 12c-3 3-7 3-7 3s0-4 3-7c2-2 5-3 8-3 3 0 6 3 6 3s-1 6-3 8c-1 1-3 2-4 2Z"/><path d="M9 15s.5 2.5 2 4c1.5 1.5 4 2 4 2s-.5-2.5-2-4"/><path d="M15 9s2.5.5 4 2c1.5 1.5 2 4 2 4s-2.5-.5-4-2"/><path d="m9 15 3-3"/></svg>`,
+  Building: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M8 10h.01"/><path d="M16 10h.01"/><path d="M8 14h.01"/><path d="M16 14h.01"/></svg>`,
+  Monitor: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>`,
+  Sparkles: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="m5 3 1 2.5L8.5 6 6 7 5 9.5 4 7 1.5 6 4 5.5z"/><path d="m19 17 1 2.5 2.5.5-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1z"/></svg>`,
+  ChevronRight: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>`,
+  RefreshCw: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M16 3h5v5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 21H3v-5"/></svg>`
+};
+
+let currentQuizQuestionIndex = 0;
+let quizAnswers = [];
+let quizShuffledOptions = [];
+let quizSelectedDeptId = null;
+let quizDimensionScores = null;
+let quizPrimaryPersona = null;
+let quizTopDepartments = [];
 
 function renderQuizWelcome() {
-    currentQuestionIndex = 0;
-    userScores = { A: 0, B: 0, C: 0, D: 0 };
+    currentQuizQuestionIndex = 0;
+    quizAnswers = [];
+    quizShuffledOptions = [];
+    quizSelectedDeptId = null;
+    quizDimensionScores = null;
+    quizPrimaryPersona = null;
+    quizTopDepartments = [];
 
     const container = document.getElementById('quiz-container');
     if (!container) return;
 
     container.innerHTML = `
         <div class="quiz-welcome animate-fade-in">
-            <div class="quiz-welcome-icon">🎯</div>
-            <h2 style="font-size: 2rem; margin-bottom: 20px; color: #0D2D5A;">找到你在嘉新的位置</h2>
-            <p style="color: #636e72; line-height: 1.8; margin-bottom: 30px;">
-                探索你的職涯基因，看你的性格傾向與嘉新四大事業體中哪一個最契合。<br>
-                <span style="font-size: 0.9rem; color: #a4b0be; display: inline-block; margin-top: 10px;">約 15 秒完成，共 6 個問題</span>
-            </p>
-            <button onclick="startQuiz()" class="quiz-start-btn">開始測驗 ▶</button>
-            <div style="margin-top: 40px; font-size: 0.85rem; color: #b2bec3;">
-                「以70年水泥為基，守護從森林到人文的生命棲位」
+            <div class="quiz-welcome-icon-container">
+                ${QUIZ_ICONS.Sparkles}
             </div>
+            <h1 class="quiz-welcome-title">
+              嘉新企業團<br/>職場人格快測
+            </h1>
+            <p class="quiz-welcome-subtitle">
+              只需 5 題，發掘你的職場超能力。<br/>找到你在嘉新的最佳位置！
+            </p>
+            <button onclick="startQuiz()" class="quiz-start-btn">
+              開始測驗 ${QUIZ_ICONS.ChevronRight}
+            </button>
         </div>
     `;
 }
 
 function startQuiz() {
-    currentQuestionIndex = 0;
-    userScores = { A: 0, B: 0, C: 0, D: 0 };
-    renderQuestion(currentQuestionIndex);
+    currentQuizQuestionIndex = 0;
+    quizAnswers = [];
+    renderQuizQuestion();
 }
 
-function renderQuestion(index) {
+function renderQuizQuestion() {
     const container = document.getElementById('quiz-container');
     if (!container) return;
 
-    const q = quizQuestions[index];
-    const progressPercent = ((index + 1) / quizQuestions.length) * 100;
+    const q = QUESTIONS[currentQuizQuestionIndex];
+    const progressPercent = ((currentQuizQuestionIndex + 1) / QUESTIONS.length) * 100;
+
+    // Shuffle options using Fisher-Yates algorithm
+    const optionsCopy = [...q.options];
+    for (let i = optionsCopy.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [optionsCopy[i], optionsCopy[j]] = [optionsCopy[j], optionsCopy[i]];
+    }
+    quizShuffledOptions = optionsCopy;
 
     let optionsHtml = '';
-    const letters = ['A', 'B', 'C', 'D'];
-    q.options.forEach((opt, i) => {
+    quizShuffledOptions.forEach((opt, idx) => {
+        const letter = String.fromCharCode(65 + idx); // A, B, C, D
         optionsHtml += `
-            <button onclick="handleAnswer('${opt.type}')" class="quiz-option">
-                <span class="quiz-option-letter">${letters[i]}</span>
+            <button onclick="handleQuizAnswer(${idx})" class="quiz-option">
+                <span class="quiz-option-letter">${letter}</span>
                 <span class="quiz-option-text">${opt.text}</span>
             </button>
         `;
@@ -1595,23 +1641,21 @@ function renderQuestion(index) {
 
     container.innerHTML = `
         <div class="quiz-question-view animate-fade-in">
+            <!-- Progress Bar -->
             <div class="quiz-progress-wrapper">
                 <div class="quiz-progress-text">
                     <span>測驗進度</span>
-                    <span>${index + 1} / ${quizQuestions.length}</span>
+                    <span>${currentQuizQuestionIndex + 1} / ${QUESTIONS.length}</span>
                 </div>
                 <div class="quiz-progress-bg">
                     <div class="quiz-progress-fill" style="width: ${progressPercent}%;"></div>
                 </div>
             </div>
-            
-            <div class="fact-box">
-                <span class="fact-badge">嘉新真實成績</span>
-                <p class="fact-text">「${q.fact}」</p>
-            </div>
-            
-            <h3 class="quiz-question-title">${q.question}</h3>
-            
+
+            <!-- Question -->
+            <h2 class="quiz-question-title">${q.q}</h2>
+
+            <!-- Options -->
             <div class="quiz-options-list">
                 ${optionsHtml}
             </div>
@@ -1619,75 +1663,333 @@ function renderQuestion(index) {
     `;
 }
 
-function handleAnswer(type) {
-    userScores[type]++;
+function handleQuizAnswer(shuffledOptIdx) {
+    const selectedOption = quizShuffledOptions[shuffledOptIdx];
+    quizAnswers.push(selectedOption.traits);
 
-    if (currentQuestionIndex < quizQuestions.length - 1) {
-        currentQuestionIndex++;
-        renderQuestion(currentQuestionIndex);
+    if (currentQuizQuestionIndex < QUESTIONS.length - 1) {
+        currentQuizQuestionIndex++;
+        renderQuizQuestion();
     } else {
-        showResult();
+        renderQuizLoading();
     }
 }
 
-function showResult() {
+function renderQuizLoading() {
     const container = document.getElementById('quiz-container');
     if (!container) return;
 
-    let maxScore = -1;
-    let winner = 'A';
-    for (let key in userScores) {
-        if (userScores[key] > maxScore) {
-            maxScore = userScores[key];
-            winner = key;
-        }
-    }
-
-    const result = quizResults[winner];
-
-    let traitsHtml = '';
-    result.traits.forEach(trait => {
-        traitsHtml += `<span class="trait-tag">#${trait}</span>`;
-    });
-
     container.innerHTML = `
-        <div class="quiz-result-view animate-fade-in">
-            <div class="result-icon-wrapper">
-                <span class="result-icon">${result.icon}</span>
+        <div class="quiz-loading-container animate-fade-in">
+            <div class="quiz-loading-spinner">
+                ${QUIZ_ICONS.RefreshCw}
             </div>
-            <div class="result-subtitle" style="color: ${result.color};">測驗分析結果</div>
-            <h2 class="result-title">${result.title}</h2>
-            <div class="result-bu-tag">匹配：${result.bu}</div>
-            
-            <div class="result-desc-box">
-                <p>${result.desc}</p>
-                <div class="traits-container">
-                    ${traitsHtml}
-                </div>
-            </div>
-            
-            <div class="result-actions">
-                <a href="https://www.104.com.tw/company/5gonzzc?jobsource=google&from=quiz" target="_blank" class="quiz-start-btn" style="background-color: ${result.color}; border-color: ${result.color}; box-shadow: 0 4px 15px ${result.color}40; display: inline-block; text-decoration: none; text-align: center; color: white;">
-                    查看最新職缺
-                </a>
-                <button onclick="renderQuizWelcome()" class="quiz-retry-btn">
-                    ↻ 重新測驗
-                </button>
-            </div>
-            
-            <div class="result-footer">
-                <div class="footer-icons">🌱 🏢 ❤️</div>
-                <div class="footer-text">© 嘉新企業團 CHC Group. 永續、女力、以人為本</div>
-            </div>
+            <h3 class="quiz-loading-text">分析您的專屬特質...</h3>
         </div>
     `;
+
+    setTimeout(calculateQuizResults, 1500);
 }
+
+function calculateQuizResults() {
+    // 1. Sum up all trait scores
+    const scores = { S: 0, P: 0, H: 0, A: 0, X: 0, T: 0 };
+    quizAnswers.forEach(traits => {
+        Object.entries(traits).forEach(([trait, score]) => {
+            scores[trait] += score;
+        });
+    });
+
+    // Clean scores for visualization (Math.floor)
+    const cleanScores = {
+        S: Math.floor(scores.S), P: Math.floor(scores.P),
+        H: Math.floor(scores.H), A: Math.floor(scores.A),
+        X: Math.floor(scores.X), T: Math.floor(scores.T)
+    };
+    quizDimensionScores = cleanScores;
+
+    // 2. Determine primary persona and sorted traits (adding small random factor to prevent ties)
+    const sortedTraits = Object.keys(scores)
+        .map(trait => ({ trait, score: scores[trait] + (Math.random() * 0.1) }))
+        .sort((a, b) => b.score - a.score);
+
+    const primary = sortedTraits[0].trait;
+    quizPrimaryPersona = primary;
+
+    const scoreS = cleanScores.S;
+    const scoreP = cleanScores.P;
+    const scoreH = cleanScores.H;
+    const scoreA = cleanScores.A;
+    const scoreX = cleanScores.X;
+    const scoreT = cleanScores.T;
+
+    // 3. Recommended Departments Decision Tree
+    let primaryMatches = [];
+    let secondaryMatches = [];
+
+    if (primary === 'S') {
+        if (scoreT >= scoreH) primaryMatches.push('IN');
+        else if (scoreH > scoreT) primaryMatches.push('GM');
+        if (Math.abs(scoreS - scoreH) <= 2 && scoreT >= 2) primaryMatches.push('SU');
+    }
+    else if (primary === 'P') {
+        if (scoreT >= 3) primaryMatches.push('FI');
+        else {
+            primaryMatches.push('AU');
+            primaryMatches.push('BS');
+        }
+    }
+    else if (primary === 'H') {
+        if (scoreX >= 3) primaryMatches.push('TC');
+        else if (scoreS >= 2 && scoreS <= 4) primaryMatches.push('SU');
+        else primaryMatches.push('AS');
+    }
+    else if (primary === 'A') {
+        if (scoreS >= 3) primaryMatches.push('SA');
+        if (scoreT >= 3) primaryMatches.push('IT');
+        if (scoreS < 3 && scoreT < 3) primaryMatches.push('GA');
+    }
+    else if (primary === 'T') {
+        if (scoreA >= 3) primaryMatches.push('IT');
+        if (scoreS >= 3) primaryMatches.push('IN');
+        if (scoreA < 3 && scoreS < 3) primaryMatches.push('FI');
+    }
+    else if (primary === 'X') {
+        if (scoreP >= 3) primaryMatches.push('GA');
+        if (scoreH >= 3) primaryMatches.push('AS');
+        if (scoreP < 3 && scoreH < 3) primaryMatches.push('TC');
+    }
+
+    // Default fallbacks for primary matches
+    if (primaryMatches.length === 0) {
+        if (primary === 'S') primaryMatches.push('GM');
+        if (primary === 'P') primaryMatches.push('BS');
+        if (primary === 'H') primaryMatches.push('TC');
+        if (primary === 'A') primaryMatches.push('SA');
+        if (primary === 'T') primaryMatches.push('IT');
+        if (primary === 'X') primaryMatches.push('GA');
+    }
+
+    // 4. Secondary Recommendations
+    const secondaryTrait = sortedTraits[1].trait;
+    const tryAddSecondary = (deptId) => {
+        if (!primaryMatches.includes(deptId) && !secondaryMatches.includes(deptId)) {
+            secondaryMatches.push(deptId);
+        }
+    };
+
+    if (secondaryTrait === 'S') {
+        if (scoreT >= scoreH) tryAddSecondary('IN');
+        else if (scoreH > scoreT) tryAddSecondary('GM');
+        if (Math.abs(scoreS - scoreH) <= 2 && scoreT >= 2) tryAddSecondary('SU');
+    }
+    else if (secondaryTrait === 'P') {
+        if (scoreT >= 3) tryAddSecondary('FI');
+        else { tryAddSecondary('AU'); tryAddSecondary('BS'); }
+    }
+    else if (secondaryTrait === 'H') {
+        if (scoreX >= 3) tryAddSecondary('TC');
+        else if (scoreS >= 2 && scoreS <= 4) tryAddSecondary('SU');
+        else tryAddSecondary('AS');
+    }
+    else if (secondaryTrait === 'A') {
+        if (scoreS >= 3) tryAddSecondary('SA');
+        if (scoreT >= 3) tryAddSecondary('IT');
+        if (scoreS < 3 && scoreT < 3) tryAddSecondary('GA');
+    }
+    else if (secondaryTrait === 'T') {
+        if (scoreA >= 3) tryAddSecondary('IT');
+        if (scoreS >= 3) tryAddSecondary('IN');
+        if (scoreA < 3 && scoreS < 3) tryAddSecondary('FI');
+    }
+    else if (secondaryTrait === 'X') {
+        if (scoreP >= 3) tryAddSecondary('GA');
+        if (scoreH >= 3) tryAddSecondary('AS');
+        if (scoreP < 3 && scoreH < 3) tryAddSecondary('TC');
+    }
+
+    // 5. Fallback logic based on weights to fill up to 3 recommendations
+    const fallbackScores = { SU: 0, BS: 0, AU: 0, GM: 0, AS: 0, SA: 0, GA: 0, IN: 0, TC: 0, FI: 0, LE: 0, IT: 0 };
+    fallbackScores.GM = scoreS * 1.5; fallbackScores.IN = scoreS + scoreT; fallbackScores.SU = scoreS + scoreH;
+    fallbackScores.BS = scoreP * 1.5; fallbackScores.AU = scoreP * 1.2; fallbackScores.FI = scoreP + scoreT; fallbackScores.LE = scoreP * 1.1;
+    fallbackScores.TC = scoreH + scoreX;
+    fallbackScores.SA = scoreA + scoreS;
+    fallbackScores.IT = scoreT + scoreA;
+    fallbackScores.GA = scoreX + scoreP; fallbackScores.AS = scoreX + scoreH;
+
+    const fallbackSorted = Object.keys(fallbackScores)
+        .sort((a, b) => fallbackScores[b] - fallbackScores[a]);
+
+    let finalDeptIds = [...primaryMatches, ...secondaryMatches];
+    finalDeptIds = [...new Set(finalDeptIds)]; // deduplicate
+
+    let idx = 0;
+    while (finalDeptIds.length < 3 && idx < fallbackSorted.length) {
+        if (!finalDeptIds.includes(fallbackSorted[idx])) {
+            finalDeptIds.push(fallbackSorted[idx]);
+        }
+        idx++;
+    }
+
+    finalDeptIds = finalDeptIds.slice(0, 3);
+    quizTopDepartments = finalDeptIds.map(id => DEPARTMENTS[id]);
+
+    renderQuizResult();
+}
+
+function renderQuizResult() {
+    const container = document.getElementById('quiz-container');
+    if (!container) return;
+
+    const persona = TRAIT_PERSONAS[quizPrimaryPersona];
+    const totalScore = Object.values(quizDimensionScores).reduce((a, b) => a + b, 0);
+
+    // Get sorted dimensions to display the top 3
+    const sortedDimensions = Object.entries(quizDimensionScores)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 3);
+
+    let chartRowsHtml = '';
+    sortedDimensions.forEach(([trait, score]) => {
+        const percentage = totalScore > 0 ? Math.round((score / totalScore) * 100) : 0;
+        const config = DIMENSION_LABELS[trait];
+        chartRowsHtml += `
+            <div class="quiz-chart-row">
+                <div class="quiz-chart-label">${config.label}</div>
+                <div class="quiz-chart-bar-wrapper" style="background-color: ${config.light};">
+                    <div class="quiz-chart-bar" style="width: 0%; background-color: ${config.color};"></div>
+                </div>
+                <div class="quiz-chart-val">${percentage}%</div>
+            </div>
+        `;
+    });
+
+    let deptsHtml = '';
+    quizTopDepartments.forEach((dept, idx) => {
+        const isSelected = quizSelectedDeptId === dept.id;
+        const cardClass = isSelected ? 'quiz-dept-card selected' : 'quiz-dept-card';
+        
+        let responsibilitiesListHtml = '';
+        dept.responsibilities.forEach(resp => {
+            responsibilitiesListHtml += `
+                <li class="quiz-dept-resp-item">
+                    <span class="quiz-dept-resp-bullet">•</span>
+                    <span>${resp}</span>
+                </li>
+            `;
+        });
+
+        deptsHtml += `
+            <div class="${cardClass}" id="dept-card-${dept.id}">
+                <button class="quiz-dept-header" onclick="toggleQuizDeptCard('${dept.id}')">
+                    <div class="quiz-dept-number">${idx + 1}</div>
+                    <div class="quiz-dept-title">${dept.name}</div>
+                    <div class="quiz-dept-arrow">
+                        ${QUIZ_ICONS.ChevronRight}
+                    </div>
+                </button>
+                <div class="quiz-dept-content-wrapper" id="dept-content-wrapper-${dept.id}" style="height: 0px;">
+                    <div class="quiz-dept-content">
+                        <div class="quiz-dept-sep"></div>
+                        <h4 class="quiz-dept-resp-title">主要職掌業務</h4>
+                        <ul class="quiz-dept-resp-list">
+                            ${responsibilitiesListHtml}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    const hashKeywords = persona.keywords.split('｜').map(kw => `#${kw.trim()}`).join(' ');
+
+    container.innerHTML = `
+        <div class="quiz-result-view animate-fade-in" style="overflow-y: auto;">
+            <!-- Header: Persona Icon & Title -->
+            <div class="quiz-result-icon-wrapper">
+                ${QUIZ_ICONS[persona.icon]}
+            </div>
+            <h2 class="quiz-result-title">${persona.title}</h2>
+            <p class="quiz-result-desc">${persona.desc}</p>
+
+            <!-- Keywords -->
+            <div class="quiz-result-keywords-box">
+                <div class="quiz-result-keywords-title">關鍵特質</div>
+                <div class="quiz-result-keywords-text">${hashKeywords}</div>
+            </div>
+
+            <!-- Chart -->
+            <div class="quiz-chart-box">
+                <h3 class="quiz-chart-title">您的職場特質組成</h3>
+                <div class="space-y-3.5">
+                    ${chartRowsHtml}
+                </div>
+            </div>
+
+            <!-- Recommended Departments -->
+            <div style="margin-top: auto; width: 100%;">
+                <h3 class="quiz-depts-title">點擊查看適合您的部門與職掌</h3>
+                <div class="quiz-depts-list">
+                    ${deptsHtml}
+                </div>
+            </div>
+
+            <!-- Retry Button -->
+            <button onclick="renderQuizWelcome()" class="quiz-retry-btn-new">
+                ${QUIZ_ICONS.RefreshCw} 回到首頁重新測驗
+            </button>
+        </div>
+    `;
+
+    // Trigger chart animation after render
+    setTimeout(() => {
+        const bars = container.querySelectorAll('.quiz-chart-bar');
+        bars.forEach((bar, idx) => {
+            const trait = sortedDimensions[idx][0];
+            const score = quizDimensionScores[trait];
+            const percentage = totalScore > 0 ? Math.round((score / totalScore) * 100) : 0;
+            bar.style.width = `${percentage}%`;
+        });
+    }, 50);
+}
+
+function toggleQuizDeptCard(deptId) {
+    const card = document.getElementById(`dept-card-${deptId}`);
+    const contentWrapper = document.getElementById(`dept-content-wrapper-${deptId}`);
+    if (!card || !contentWrapper) return;
+
+    const isSelected = card.classList.contains('selected');
+
+    // Close all other cards first to create an accordion effect
+    const allCards = document.querySelectorAll('.quiz-dept-card');
+    allCards.forEach(c => {
+        c.classList.remove('selected');
+        const wrapper = c.querySelector('.quiz-dept-content-wrapper');
+        if (wrapper) {
+            wrapper.style.height = '0px';
+        }
+    });
+
+    if (!isSelected) {
+        card.classList.add('selected');
+        const content = contentWrapper.querySelector('.quiz-dept-content');
+        if (content) {
+            const scrollHeight = content.scrollHeight;
+            contentWrapper.style.height = `${scrollHeight}px`;
+        }
+        quizSelectedDeptId = deptId;
+    } else {
+        quizSelectedDeptId = null;
+    }
+}
+
+
 
 function switchWomenLeaderTab(leaderId, tabName) {
     // 1. Get the card container of the target leader
     const activeContent = document.getElementById(`${leaderId}-${tabName}`);
     if (!activeContent) return;
-    
+
     const card = activeContent.closest('.leader-card, .gm-column-section');
     if (!card) return;
 
@@ -1715,15 +2017,15 @@ function switchWomenLeaderTab(leaderId, tabName) {
 // ==========================================
 // GA4 External Links & Outbound Click Tracking
 // ==========================================
-document.addEventListener('click', function(e) {
+document.addEventListener('click', function (e) {
     const anchor = e.target.closest('a');
     if (anchor && anchor.href) {
         const url = anchor.href;
-        
+
         // Track only external links (different hostname or not local)
         if (!url.includes(window.location.hostname) && url.startsWith('http')) {
             let linkType = 'other';
-            
+
             // Classify links based on their domain
             if (url.includes('facebook.com')) {
                 linkType = 'facebook';
@@ -1741,7 +2043,7 @@ document.addEventListener('click', function(e) {
             } else if (url.includes('apple.co') || url.includes('spotify.com') || url.includes('spoti.fi') || url.includes('soundon')) {
                 linkType = 'podcast';
             }
-            
+
             if (typeof gtag === 'function') {
                 gtag('event', 'click_external_link', {
                     'link_url': url,
@@ -1756,7 +2058,7 @@ document.addEventListener('click', function(e) {
 // ==========================================
 // GA4 Tab Close / Visibility Change Tracking (Dwell Time Protection)
 // ==========================================
-window.addEventListener('visibilitychange', function() {
+window.addEventListener('visibilitychange', function () {
     if (document.visibilityState === 'hidden' && viewStartTime && lastActiveView && lastActiveView !== 'map') {
         const durationSeconds = Math.round((Date.now() - viewStartTime) / 1000);
         if (durationSeconds >= 1 && typeof gtag === 'function') {
