@@ -678,8 +678,8 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
+    width: 88px;
+    height: 88px;
 }
 
 .quiz-welcome-icon-container svg {
@@ -866,8 +866,8 @@ body {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
+    width: 96px;
+    height: 96px;
 }
 
 .quiz-loading-spinner svg {

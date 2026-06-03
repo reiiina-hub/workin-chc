@@ -961,23 +961,24 @@ const mapData = {
                 <div class="placeholder-card" style="border-top: 5px solid #8e44ad; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(142, 68, 173, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('story_scene_1')">
                     <h2 style="color: #8e44ad; margin-bottom: 10px;">城市韌性｜築起跨越半世紀的底氣</h2>
                     <p style="color: #636e72; line-height: 1.6;">從1954年的第一袋五洲牌水泥開始,我們就與台灣的土地同生共息。嘉新從水泥起家,透過賦予舊空間新生命――讓老舊的靈魂長出新生的質感,為永續生活築第一道防線。</p>
-                        <p style="color: #8e44ad; font-size: 1.05rem; font-weight: bold; margin: 0; font-style: italic;">「穩定，是 Quality of Life 最堅毅的基石。」</p>
+                    <div style="background: rgba(142, 68, 173, 0.05); padding: 10px 12px; border-left: 4px solid #8e44ad; border-radius: 4px; margin-top: 15px;">
+                        <p style="color: #8e44ad; font-size: 0.95rem; font-weight: bold; margin: 0; font-style: italic;">「穩定，是 Quality of Life 最堅毅的基石。」</p>
                     </div>
                     <div style="margin-top: 15px; font-weight: bold; color: #8e44ad; text-align: right;">探索故事 ▶</div>
                 </div>
                 <div class="placeholder-card" style="border-top: 5px solid #d35400; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(211, 84, 0, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('story_scene_2')">
                     <h2 style="color: #d35400; margin-bottom: 10px;">優雅旅宿｜在異地找回生活的留白</h2>
                     <p style="color: #636e72; line-height: 1.6;">如果生活是一場長跑,旅宿就是一段優雅的留白。嘉新跨越產業邊界,將對建築的嚴謹轉化為精緻服務的藝術。我們在每一個細節處雕琢「家」的溫度。讓旅行不再只是移動,而是一次感官的洗禮。</p>
-                    <div style="background: rgba(211, 84, 0, 0.05); padding: 15px; border-left: 4px solid #d35400; border-radius: 4px; margin-top: 15px;">
-                        <p style="color: #d35400; font-size: 1.05rem; font-weight: bold; margin: 0; font-style: italic;">「優雅，是 Quality of Life 最細膩的感官體驗。」</p>
+                    <div style="background: rgba(211, 84, 0, 0.05); padding: 10px 12px; border-left: 4px solid #d35400; border-radius: 4px; margin-top: 15px;">
+                        <p style="color: #d35400; font-size: 0.95rem; font-weight: bold; margin: 0; font-style: italic;">「優雅，是 Quality of Life 最細膩的感官體驗。」</p>
                     </div>
                     <div style="margin-top: 15px; font-weight: bold; color: #d35400; text-align: right;">閱讀部落格 ▶</div>
                 </div>
                 <div class="placeholder-card" style="border-top: 5px solid #16a085; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(22, 160, 133, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('story_scene_3')">
                     <h2 style="color: #16a085; margin-bottom: 10px;">細膩醫養｜守護生命中最溫柔的時刻</h2>
                     <p style="color: #636e72; line-height: 1.6;">高品質的生活,應該在生命的每一個轉折點都得到尊嚴的對待。從產後護理之家到全齡照護的策略布局,我們將醫療專業化作隱形的守護力量，在最脆弱也最神聖的時刻,讓您感受被悉心照料的幸福。</p>
-                    <div style="background: rgba(22, 160, 133, 0.05); padding: 15px; border-left: 4px solid #16a085; border-radius: 4px; margin-top: 15px;">
-                        <p style="color: #16a085; font-size: 1.05rem; font-weight: bold; margin: 0; font-style: italic;">「健康，是 Quality of Life 最深刻的溫柔關懷。」</p>
+                    <div style="background: rgba(22, 160, 133, 0.05); padding: 10px 12px; border-left: 4px solid #16a085; border-radius: 4px; margin-top: 15px;">
+                        <p style="color: #16a085; font-size: 0.95rem; font-weight: bold; margin: 0; font-style: italic;">「健康，是 Quality of Life 最深刻的溫柔關懷。」</p>
                     </div>
                     <div style="margin-top: 15px; font-weight: bold; color: #16a085; text-align: right;">閱讀部落格 ▶</div>
                 </div>
