@@ -667,7 +667,7 @@ const mapData = {
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
                 <div class="placeholder-card" style="border-top: 5px solid #2ecc71; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(46, 204, 113, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('esg_e')">
                     <h2 style="color: #2ecc71; margin-bottom: 10px;">E 環境共好</h2>
-                    <p style="color: #636e72; line-height: 1.6;">嘉新致力於與自然和諧共存，以節能減碳為核心，推動低碳物流與建物綠化，並在岡山基地實踐屋頂型太陽能與 TNFD 規劃。點擊探索我們如何結合科技與生態，創造永續的綠色典範。</p>
+                    <p style="color: #636e72; line-height: 1.6;">嘉新致力於與自然和諧共存，以節能減碳為核心，推動低碳物流與建物綠化，並在岡山實踐屋頂型太陽能與 TNFD 規劃。點擊探索我們如何結合科技與生態，創造永續的綠色典範。</p>
                     <div style="margin-top: 15px; font-weight: bold; color: #2ecc71; text-align: right;">探索環境故事 ▶</div>
                 </div>
                 <div class="placeholder-card" style="border-top: 5px solid #f39c12; cursor: pointer; transition: all 0.2s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 8px 25px rgba(243, 156, 18, 0.2)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(0,0,0,0.05)';" onclick="navigateTo('esg_s')">
@@ -701,7 +701,7 @@ const mapData = {
                         <div style="width: 2px; background: #ecf0f1;"></div>
                         <div style="text-align: center; flex: 1; min-width: 120px;">
                             <div style="font-size: 2.2rem; color: #2ecc71; font-weight: 900; margin-bottom: 5px; padding-top: 5px;">低衝擊</div>
-                            <div style="color: #7f8c8d; font-size: 0.95rem; font-weight: bold; letter-spacing: 1px;">水庫綠能開發</div>
+                            <div style="color: #7f8c8d; font-size: 0.95rem; font-weight: bold; letter-spacing: 1px;">降低環境干擾</div>
                         </div>
                         <div style="width: 2px; background: #ecf0f1;"></div>
                         <div style="text-align: center; flex: 1; min-width: 120px;">
@@ -719,12 +719,12 @@ const mapData = {
                     </div>
                 </div>
 
-                <!-- 岡山基地植相盤點與 TNFD -->
+                <!-- 岡山植相盤點與 TNFD -->
                 <div style="margin-bottom: 30px; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
                     <div style="padding: 30px;">
-                        <h2 style="color: #2ecc71; font-size: 1.8rem; margin-bottom: 15px;">🌿 岡山基地植相盤點與簡易 TNFD 前瞻規劃</h2>
-                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 15px;">岡山基地周邊植相呈現低海拔次生林、草生地與既有園藝植栽混合的環境特徵。現地可見構樹、茄苳、苦楝、台灣欒樹、雀榕、稜果榕、榕樹、姑婆芋、血桐、無患子、芒草、相思樹等台灣低海拔常見原生或本土化植物，顯示基地周邊仍具備一定程度的在地生態基礎與自然演替潛力。</p>
-                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 0;">依簡易 TNFD 架構初步辨識，岡山基地的自然資本重點不在於大型原始森林，而是低海拔次生林加上一些人為引進的植物。這些區域可提供鳥類、蝶類、授粉昆蟲及小型生物覓食、停棲與遷移節點。未來若能以原生樹種補植、外來園藝種控管、草地低干擾管理與基地邊界綠帶串聯為方向，可逐步由「維持綠化」提升至「自然資本管理」。</p>
+                        <h2 style="color: #2ecc71; font-size: 1.8rem; margin-bottom: 15px;">🌿 岡山植相盤點與簡易 TNFD 前瞻規劃</h2>
+                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 15px;">岡山周邊植相呈現低海拔次生林、草生地與既有園藝植栽混合的環境特徵。現地可見構樹、茄苳、苦楝、台灣欒樹、雀榕、稜果榕、榕樹、姑婆芋、血桐、無患子、芒草、相思樹等台灣低海拔常見原生或本土化植物，顯示基地周邊仍具備一定程度的在地生態基礎與自然演替潛力。</p>
+                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 0;">依簡易 TNFD 架構初步辨識，岡山的自然資本重點不在於大型原始森林，而是低海拔次生林加上一些人為引進的植物。這些區域可提供鳥類、蝶類、授粉昆蟲及小型生物覓食、停棲與遷移節點。未來若能以原生樹種補植、外來園藝種控管、草地低干擾管理與基地邊界綠帶串聯為方向，可逐步由「維持綠化」提升至「自然資本管理」。</p>
                     </div>
                 </div>
 
@@ -732,17 +732,17 @@ const mapData = {
                 <div style="margin-bottom: 30px; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
                     <div style="padding: 30px;">
                         <h2 style="color: #2ecc71; font-size: 1.8rem; margin-bottom: 15px;">🦋 原生種保留與外來園藝種管理</h2>
-                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 15px;">本區具代表性的原生與在地風土植物包括台灣欒樹、茄苳、構樹、苦楝、雀榕、稜果榕、榕樹、姑婆芋、血桐、無患子、山芙蓉、光臘樹、盤龍木、皮孫木、潺槁樹與芒草等。這些植物多具有低海拔適應性強、耐乾旱或耐擾動、可提供果實與棲地資源等特性，適合作為岡山基地後續生態復育與綠帶營造的優先物種。</p>
+                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 15px;">本區具代表性的原生與在地風土植物包括台灣欒樹、茄苳、構樹、苦楝、雀榕、稜果榕、榕樹、姑婆芋、血桐、無患子、山芙蓉、光臘樹、盤龍木、皮孫木、潺槁樹與芒草等。這些植物多具有低海拔適應性強、耐乾旱或耐擾動、可提供果實與棲地資源等特性，適合作為岡山後續生態復育與綠帶營造的優先物種。</p>
                         <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 0;">相較之下列，阿勃勒、黃金風鈴木、火焰木、馬拉巴栗、小葉欖仁、朱槿、椰子、龍船花等多屬外來或園藝栽培植物，雖具景觀與遮蔭功能，但較不宜作為生物多樣性提升的主軸。後續規劃可採「保留既有大樹、優先補植原生種、逐步降低外來園藝種比例」的方式，讓基地綠化從視覺景觀轉向具生態功能的棲地營造。</p>
                     </div>
                 </div>
 
-                <!-- 空間再利用與低衝擊綠能：岡山基地屋頂型太陽能 -->
+                <!-- 空間再利用與低衝擊綠能：屋頂型太陽能 -->
                 <div style="margin-bottom: 30px; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
                     <div style="padding: 30px;">
-                        <h2 style="color: #2ecc71; font-size: 1.8rem; margin-bottom: 15px;">☀️ 空間再利用與低衝擊綠能：岡山基地屋頂型太陽能</h2>
-                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 15px;">相較於開發綠地設置太陽能板，岡山基地的太陽能規劃可聚焦於既有屋頂與建體上方空間再利用。透過將太陽能系統設置於廠房、倉儲或既有建築物屋頂，可避免額外占用草生地、樹叢與基地邊界綠帶，降低對現地植被、土壤透水性與生物棲地的干擾。</p>
-                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 0;">此作法兼具能源轉型與自然保育效益：一方面提升既有建築空間的能源產出效率，回應低碳營運與再生能源使用；另一方面也保留基地內可供原生植栽復育、生態綠帶串聯與雨水入滲的地面空間。對岡山基地而言，屋頂型太陽能可被定位為「不新增土地開發壓力的低衝擊綠能方案」，與 TNFD 所強調的自然資本風險管理方向相互呼應。</p>
+                        <h2 style="color: #2ecc71; font-size: 1.8rem; margin-bottom: 15px;">☀️ 空間再利用與低衝擊綠能：屋頂型太陽能</h2>
+                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 15px;">相較於開發綠地設置太陽能板，岡山的太陽能規劃將聚焦於既有屋頂與建體上方空間再利用。透過將太陽能系統設置於廠房、倉儲或既有建築物屋頂，可避免額外占用草生地、樹叢與基地邊界綠帶，降低對現地植被、土壤透水性與生物棲地的干擾。</p>
+                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 0;">此作法兼具能源轉型與自然保育效益：一方面提升既有建築空間的能源產出效率，回應低碳營運與再生能源使用；另一方面也保留基地內可供原生植栽復育、生態綠帶串聯與雨水入滲的地面空間。對我們而言，屋頂型太陽能可被定位為「不新增土地開發壓力的低衝擊綠能方案」，與 TNFD 所強調的自然資本風險管理方向相互呼應。</p>
                     </div>
                 </div>
 
@@ -1026,8 +1026,8 @@ const mapData = {
                     <div class="timeline-dot" style="border-color: #0984e3; box-shadow: 0 0 0 6px rgba(9, 132, 227, 0.15);"></div>
                     <div class="timeline-item-content">
                         <div class="timeline-year" style="color: #0984e3;">2000年代初</div>
-                        <div class="timeline-title">華麗轉身，水泥廠變黃金地</div>
-                        <p class="timeline-text">隨着2001年高雄岡山廠停產，嘉新轉為貿易通路商，外購水泥供應市場，並開始玩起「空間魔法」。</p>
+                        <div class="timeline-title">華麗轉身，從製造走向通路</div>
+                        <p class="timeline-text">隨着2001年高雄岡山廠停產，嘉新轉為貿易通路商，外購水泥供應市場，走向更靈活的市場角色。</p>
                     </div>
                 </div>
 
@@ -1559,15 +1559,15 @@ function closeIntro() {
 // Quiz Logic (Native JS)
 // ==========================================
 const QUIZ_ICONS = {
-  Target: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>`,
-  ShieldCheck: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>`,
-  Users: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
-  Rocket: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 3.4-2 3.4s2.14-.5 3.4-2c1.26-1.5 2-3.4 2-3.4s-2.14.5-3.4 2Z"/><path d="M12 12c-3 3-7 3-7 3s0-4 3-7c2-2 5-3 8-3 3 0 6 3 6 3s-1 6-3 8c-1 1-3 2-4 2Z"/><path d="M9 15s.5 2.5 2 4c1.5 1.5 4 2 4 2s-.5-2.5-2-4"/><path d="M15 9s2.5.5 4 2c1.5 1.5 2 4 2 4s-2.5-.5-4-2"/><path d="m9 15 3-3"/></svg>`,
-  Building: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M8 10h.01"/><path d="M16 10h.01"/><path d="M8 14h.01"/><path d="M16 14h.01"/></svg>`,
-  Monitor: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>`,
-  Sparkles: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="m5 3 1 2.5L8.5 6 6 7 5 9.5 4 7 1.5 6 4 5.5z"/><path d="m19 17 1 2.5 2.5.5-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1z"/></svg>`,
-  ChevronRight: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>`,
-  RefreshCw: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M16 3h5v5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 21H3v-5"/></svg>`
+    Target: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>`,
+    ShieldCheck: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>`,
+    Users: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
+    Rocket: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 3.4-2 3.4s2.14-.5 3.4-2c1.26-1.5 2-3.4 2-3.4s-2.14.5-3.4 2Z"/><path d="M12 12c-3 3-7 3-7 3s0-4 3-7c2-2 5-3 8-3 3 0 6 3 6 3s-1 6-3 8c-1 1-3 2-4 2Z"/><path d="M9 15s.5 2.5 2 4c1.5 1.5 4 2 4 2s-.5-2.5-2-4"/><path d="M15 9s2.5.5 4 2c1.5 1.5 2 4 2 4s-2.5-.5-4-2"/><path d="m9 15 3-3"/></svg>`,
+    Building: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M8 10h.01"/><path d="M16 10h.01"/><path d="M8 14h.01"/><path d="M16 14h.01"/></svg>`,
+    Monitor: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>`,
+    Sparkles: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="m5 3 1 2.5L8.5 6 6 7 5 9.5 4 7 1.5 6 4 5.5z"/><path d="m19 17 1 2.5 2.5.5-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1z"/></svg>`,
+    ChevronRight: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>`,
+    RefreshCw: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M16 3h5v5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 21H3v-5"/></svg>`
 };
 
 let currentQuizQuestionIndex = 0;
@@ -1869,7 +1869,7 @@ function renderQuizResult() {
     quizTopDepartments.forEach((dept, idx) => {
         const isSelected = quizSelectedDeptId === dept.id;
         const cardClass = isSelected ? 'quiz-dept-card selected' : 'quiz-dept-card';
-        
+
         let responsibilitiesListHtml = '';
         dept.responsibilities.forEach(resp => {
             responsibilitiesListHtml += `
