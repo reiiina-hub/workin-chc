@@ -691,7 +691,7 @@ const mapData = {
                 <!-- 引言與環境數據儀表板 -->
                 <div style="background: linear-gradient(135deg, #e8f8f5 0%, #ffffff 100%); padding: 40px; border-radius: 15px; margin-bottom: 40px; border-left: 5px solid #2ecc71; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
                     <h2 style="color: #27ae60; font-size: 1.8rem; margin-bottom: 20px;">從高碳產業到永續企業的綠色蛻變</h2>
-                    <p style="color: #455a64; line-height: 1.8; font-size: 1.15rem; margin-bottom: 25px;">在多數人的印象中，水泥產業往往代表高耗能與高碳排。然而，嘉新近年逐漸打破傳統刻板印象，將環境友善視為轉型的核心。我們不只減少破壞，更積極尋求與自然共存的解方；從太陽能綠電、低碳物流到老建物的近零碳改造，每一步都在實踐我們對地球家園的溫柔承諾。</p>
+                    <p style="color: #455a64; line-height: 1.8; font-size: 1.15rem; margin-bottom: 25px;">在多數人的印象中，水泥產業往往代表高耗能與高碳排。然而，嘉新近年逐漸打破傳統刻板印象，將環境友善視為轉型的核心。我們不只減少破壞，更積極尋求與自然共存的解方；從植相盤點、選用屋頂建置太陽能板、低碳物流到老建物的近零碳改造，每一步都在實踐我們對地球家園的溫柔承諾。</p>
                     
                     <div style="display: flex; gap: 20px; justify-content: space-around; background: white; padding: 25px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.03); flex-wrap: wrap;">
                         <div style="text-align: center; flex: 1; min-width: 120px;">
@@ -722,9 +722,9 @@ const mapData = {
                 <!-- 岡山植相盤點與 TNFD -->
                 <div style="margin-bottom: 30px; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
                     <div style="padding: 30px;">
-                        <h2 style="color: #2ecc71; font-size: 1.8rem; margin-bottom: 15px;">🌿 岡山植相盤點與簡易 TNFD 前瞻規劃</h2>
-                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 15px;">岡山周邊植相呈現低海拔次生林、草生地與既有園藝植栽混合的環境特徵。現地可見構樹、茄苳、苦楝、台灣欒樹、雀榕、稜果榕、榕樹、姑婆芋、血桐、無患子、芒草、相思樹等台灣低海拔常見原生或本土化植物，顯示基地周邊仍具備一定程度的在地生態基礎與自然演替潛力。</p>
-                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 0;">依簡易 TNFD 架構初步辨識，岡山的自然資本重點不在於大型原始森林，而是低海拔次生林加上一些人為引進的植物。這些區域可提供鳥類、蝶類、授粉昆蟲及小型生物覓食、停棲與遷移節點。未來若能以原生樹種補植、外來園藝種控管、草地低干擾管理與基地邊界綠帶串聯為方向，可逐步由「維持綠化」提升至「自然資本管理」。</p>
+                        <h2 style="color: #2ecc71; font-size: 1.8rem; margin-bottom: 15px;">🌿 岡山植相盤點與簡易 TNFD 規劃</h2>
+                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 15px;">依據初步辨識，岡山的自然資本重點不在於大型原始森林，而是低海拔次生林加上一些人為引進的植物。這些區域可提供鳥類、蝶類、授粉昆蟲及小型生物覓食、停棲與遷移節點。</p>
+                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 0;">未來評估朝向原生樹種補植、外來園藝種控管、草地低干擾管理與基地邊界綠帶串聯為方向，加入透過TNFD的架構盤點 , 可望逐步由「維持綠化」提升至「自然資本管理」。</p>
                     </div>
                 </div>
 
@@ -732,8 +732,8 @@ const mapData = {
                 <div style="margin-bottom: 30px; background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05);">
                     <div style="padding: 30px;">
                         <h2 style="color: #2ecc71; font-size: 1.8rem; margin-bottom: 15px;">🦋 原生種保留與外來園藝種管理</h2>
-                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 15px;">本區具代表性的原生與在地風土植物包括台灣欒樹、茄苳、構樹、苦楝、雀榕、稜果榕、榕樹、姑婆芋、血桐、無患子、山芙蓉、光臘樹、盤龍木、皮孫木、潺槁樹與芒草等。這些植物多具有低海拔適應性強、耐乾旱或耐擾動、可提供果實與棲地資源等特性，適合作為岡山後續生態復育與綠帶營造的優先物種。</p>
-                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 0;">相較之下列，阿勃勒、黃金風鈴木、火焰木、馬拉巴栗、小葉欖仁、朱槿、椰子、龍船花等多屬外來或園藝栽培植物，雖具景觀與遮蔭功能，但較不宜作為生物多樣性提升的主軸。後續規劃可採「保留既有大樹、優先補植原生種、逐步降低外來園藝種比例」的方式，讓基地綠化從視覺景觀轉向具生態功能的棲地營造。</p>
+                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 15px;">相較之下，阿勃勒、黃金風鈴木、火焰木、馬拉巴栗、小葉欖仁、朱槿、椰子、龍船花等多屬外來或園藝栽培植物，具景觀與遮蔭功能，但對於提升生物多樣性的功能性需要進一步確認及評估。</p>
+                        <p style="color: #636e72; line-height: 1.8; font-size: 1.1rem; margin-bottom: 0;">後續規劃擬採「保留既有大樹、優先補植原生種、審慎評估外來園藝種功能性」的方式，讓基地綠化從視覺景觀轉向具生態功能的棲地營造。</p>
                     </div>
                 </div>
 
