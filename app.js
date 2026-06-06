@@ -1986,8 +1986,13 @@ function renderQuizResult() {
                 </div>
             </div>
 
+            <!-- 104 Job Button -->
+            <a href="https://www.104.com.tw/company/5gonzzc?jobsource=google&from=quiz" target="_blank" class="quiz-104-btn">
+                ${QUIZ_ICONS.Rocket} 查看嘉新最新職缺
+            </a>
+
             <!-- Retry Button -->
-            <button onclick="renderQuizWelcome()" class="quiz-retry-btn-new">
+            <button onclick="renderQuizWelcome()" class="quiz-retry-btn-new" style="margin-top: 16px;">
                 ${QUIZ_ICONS.RefreshCw} 回到首頁重新測驗
             </button>
         </div>
