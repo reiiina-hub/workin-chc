@@ -377,7 +377,8 @@ body {
 /* 圓點 (Hollow dot on the line) */
 .timeline-dot {
     position: absolute;
-    left: 42px; /* Center perfectly on the 4px line at left: 40px */
+    left: 42px;
+    /* Center perfectly on the 4px line at left: 40px */
     top: 0;
     width: 24px;
     height: 24px;
@@ -386,7 +387,8 @@ body {
     z-index: 2;
     background: white;
     border: 3px solid var(--primary-color);
-    box-shadow: 0 0 0 6px rgba(0,0,0,0.05); /* Will be overridden inline */
+    box-shadow: 0 0 0 6px rgba(0, 0, 0, 0.05);
+    /* Will be overridden inline */
 }
 
 /* 內容卡片 */
@@ -396,14 +398,14 @@ body {
     padding: 30px;
     border-radius: 12px;
     border: 1px solid #f1f2f6;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .timeline-item-content:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
 }
 
 .timeline-year {
@@ -432,7 +434,7 @@ body {
     height: auto;
     border-radius: 8px;
     margin-top: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .social-card {
@@ -523,13 +525,16 @@ body {
         border-radius: 12px;
         /* 稍微縮小圓角 */
     }
+
     /* Timeline RWD (Mobile/Tablet) */
     .timeline-container::before {
         left: 20px;
     }
+
     .timeline-item {
         padding-left: 60px;
     }
+
     .timeline-dot {
         left: 22px;
     }
@@ -672,7 +677,7 @@ body {
     background: rgba(255, 255, 255, 0.4);
     padding: 20px;
     border-radius: 50%;
-    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(8px);
     margin: 0 auto 30px auto;
     display: inline-flex;
@@ -719,7 +724,7 @@ body {
     font-size: 1.1rem;
     border: none;
     cursor: pointer;
-    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
     width: fit-content;
@@ -878,8 +883,13 @@ body {
 }
 
 @keyframes spin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .quiz-loading-text {
@@ -1208,6 +1218,7 @@ body {
 }
 
 @media (max-width: 768px) {
+
     .quiz-welcome,
     .quiz-question-view,
     .quiz-result-view {
@@ -1247,14 +1258,16 @@ body {
     transform: rotateY(180deg);
 }
 
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     box-sizing: border-box;
-    -webkit-backface-visibility: hidden; /* Safari */
+    -webkit-backface-visibility: hidden;
+    /* Safari */
     backface-visibility: hidden;
     border-radius: 12px;
     padding: 30px;
@@ -1266,12 +1279,12 @@ body {
 }
 
 .flip-card-front {
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 }
 
 .flip-card-back {
     transform: rotateY(180deg);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
 
 /* =========================================
@@ -1346,21 +1359,25 @@ body {
 .interns-track::-webkit-scrollbar {
     height: 6px;
 }
+
 .interns-track::-webkit-scrollbar-track {
     background: #f1f2f6;
     border-radius: 10px;
 }
+
 .interns-track::-webkit-scrollbar-thumb {
     background: #dfe6e9;
     border-radius: 10px;
 }
+
 .interns-track::-webkit-scrollbar-thumb:hover {
     background: #b2bec3;
 }
 
 /* 卡片基礎樣式 */
 .intern-card {
-    flex: 0 0 380px; /* 固定寬度，使其在橫軌中並排 */
+    flex: 0 0 380px;
+    /* 固定寬度，使其在橫軌中並排 */
     scroll-snap-align: start;
     background: white;
     border-radius: 16px;
@@ -1467,30 +1484,31 @@ body {
         border-radius: 12px;
         margin-bottom: 30px;
     }
-    
+
     .program-title {
         font-size: 1.3rem;
     }
-    
+
     .program-desc {
         font-size: 0.95rem;
         line-height: 1.7;
     }
-    
+
     .interns-track {
         gap: 15px;
         padding-bottom: 15px;
     }
-    
+
     .intern-card {
-        flex: 0 0 290px; /* 手機上縮窄，讓使用者能露出下一張卡片的邊緣，提示可滑動 */
+        flex: 0 0 290px;
+        /* 手機上縮窄，讓使用者能露出下一張卡片的邊緣，提示可滑動 */
         padding: 20px;
     }
-    
+
     .intern-quote-box {
         padding: 15px;
     }
-    
+
     .intern-quote {
         font-size: 0.95rem;
     }
@@ -1515,8 +1533,10 @@ body {
 
 .step-number {
     position: absolute;
-    left: -44px; /* 對齊虛線 */
-    top: 15px; /* 居中對齊第一行標題 */
+    left: -44px;
+    /* 對齊虛線 */
+    top: 15px;
+    /* 居中對齊第一行標題 */
     width: 26px;
     height: 26px;
     background: #f39c12;
@@ -1560,19 +1580,24 @@ body {
         padding-left: 20px;
         margin-left: 10px;
     }
+
     .step-number {
-        left: -32px; /* 手機上因 padding-left 縮小，微調對齊 */
+        left: -32px;
+        /* 手機上因 padding-left 縮小，微調對齊 */
         width: 22px;
         height: 22px;
         font-size: 0.75rem;
         top: 18px;
     }
+
     .step-content {
         padding: 15px;
     }
+
     .step-title {
         font-size: 1rem;
     }
+
     .step-desc {
         font-size: 0.85rem;
         line-height: 1.5;
@@ -1599,7 +1624,7 @@ body {
     background: white;
     padding: 20px;
     border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
     margin-top: 20px;
     border: 1px solid #ffe3e3;
 }
@@ -1770,7 +1795,7 @@ body {
 .leader-tab-btn.active {
     background: white;
     color: #ff7675;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
 /* 卡片內容容器 */
@@ -1815,7 +1840,7 @@ body {
     margin: 30px 0;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .video-container iframe {
@@ -1877,7 +1902,7 @@ body {
         padding: 25px;
         gap: 25px;
     }
-    
+
     .gm-column-section::after {
         width: 100%;
         height: 6px;
@@ -1943,7 +1968,7 @@ body {
     border-radius: 16px;
     padding: 22px;
     border: 1px solid #f1f2f6;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
     transition: all 0.3s ease;
     display: flex;
     flex-direction: column;
@@ -1953,7 +1978,7 @@ body {
 
 .testimonial-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
     border-color: #ff7675;
 }
 
@@ -2031,12 +2056,227 @@ body {
         font-size: 1rem;
         padding: 6px 16px;
     }
-    
+
     .testimonial-section {
         padding: 25px 15px;
     }
-    
+
     .testimonial-grid {
         grid-template-columns: 1fr;
     }
+}
+
+/* =========================================
+   AI Career Mentor (AI 職涯導師專屬諮詢 UI)
+   ========================================= */
+
+.quiz-ai-mentor-box {
+    margin-top: 32px;
+    background: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
+    padding: 24px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.quiz-ai-mentor-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.quiz-ai-mentor-header svg {
+    width: 20px;
+    height: 20px;
+    color: #38BDF8;
+    flex-shrink: 0;
+}
+
+.quiz-ai-mentor-title {
+    font-size: 14px;
+    font-weight: 900;
+    color: #0C4A6E;
+    letter-spacing: 0.05em;
+    margin: 0;
+}
+
+.quiz-ai-mentor-intro-box {
+    text-align: center;
+    padding: 24px 0;
+}
+
+.quiz-ai-mentor-intro-text {
+    font-size: 13px;
+    color: #64748B;
+    margin: 0 0 20px 0;
+    line-height: 1.6;
+}
+
+.quiz-ai-mentor-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #38BDF8 0%, #0284C7 100%);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 9999px;
+    font-weight: bold;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(2, 132, 199, 0.15);
+    transition: all 0.2s;
+    outline: none;
+}
+
+.quiz-ai-mentor-btn svg {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.quiz-ai-mentor-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(2, 132, 199, 0.25);
+}
+
+.quiz-ai-mentor-btn:active {
+    transform: translateY(0);
+}
+
+.quiz-ai-mentor-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 0;
+    text-align: center;
+}
+
+.quiz-ai-mentor-loading-spinner {
+    width: 48px;
+    height: 48px;
+    padding: 12px;
+    margin-bottom: 12px;
+    background: #F0F9FF;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.quiz-ai-mentor-loading-spinner svg {
+    width: 28px;
+    height: 28px;
+    color: #38BDF8;
+    animation: spin 1.5s linear infinite;
+}
+
+.quiz-ai-mentor-loading-text {
+    margin: 0;
+    font-size: 14px;
+    font-weight: bold;
+    color: #0C4A6E;
+}
+
+.quiz-ai-mentor-pulse {
+    animation: quiz-pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes quiz-pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: .5;
+    }
+}
+
+.quiz-ai-mentor-result-wrapper {
+    text-align: left;
+}
+
+.quiz-ai-mentor-result-title {
+    font-size: 18px;
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    color: #0369A1;
+}
+
+.quiz-ai-mentor-result-intro {
+    margin: 0 0 24px 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #475569;
+    font-weight: 500;
+}
+
+.quiz-ai-mentor-section-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.quiz-ai-mentor-section-title {
+    font-size: 15px;
+    font-weight: 900;
+    margin: 0 0 12px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #0C4A6E;
+}
+
+.quiz-ai-mentor-card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.quiz-ai-mentor-card {
+    background: white;
+    padding: 16px;
+    border-radius: 16px;
+    margin-bottom: 12px;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.quiz-ai-mentor-card.blind-spot {
+    border: 1px solid #e0f2fe; /* sky-100 */
+}
+
+.quiz-ai-mentor-card.growth-advice {
+    border: 1px solid #ffedd5; /* orange-100 */
+}
+
+.quiz-ai-mentor-card-title {
+    font-weight: bold;
+    font-size: 13px;
+    margin: 0 0 6px 0;
+}
+
+.quiz-ai-mentor-card-title.blind-spot {
+    color: #0369a1;
+}
+
+.quiz-ai-mentor-card-title.growth-advice {
+    color: #C2410C;
+}
+
+.quiz-ai-mentor-card-desc {
+    font-size: 13px;
+    color: #475569;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.quiz-ai-mentor-strong {
+    font-weight: 800;
+    color: #0C4A6E;
 }

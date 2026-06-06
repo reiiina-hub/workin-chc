@@ -1935,6 +1935,22 @@ function renderQuizResult() {
                 </div>
             </div>
 
+            <!-- Dynamic AI Career Mentor Advice -->
+            <div class="quiz-ai-mentor-box" id="quiz-ai-mentor-box">
+                <div class="quiz-ai-mentor-header">
+                    ${QUIZ_ICONS.Sparkles}
+                    <h3 class="quiz-ai-mentor-title">AI 職涯導師專屬諮詢</h3>
+                </div>
+                <div id="ai-mentor-content" class="quiz-ai-mentor-intro-box">
+                    <p class="quiz-ai-mentor-intro-text">
+                        根據您的職場特質組成，<br>即時分析您在嘉新的職涯盲點與成長建議。
+                    </p>
+                    <button onclick="generateDynamicAdvice()" class="quiz-ai-mentor-btn">
+                        ${QUIZ_ICONS.Sparkles} 點擊生成專屬諮詢內容
+                    </button>
+                </div>
+            </div>
+
             <!-- Retry Button -->
             <button onclick="renderQuizWelcome()" class="quiz-retry-btn-new">
                 ${QUIZ_ICONS.RefreshCw} 回到首頁重新測驗
@@ -2072,5 +2088,274 @@ window.addEventListener('visibilitychange', function () {
         viewStartTime = null; // Reset to avoid double reporting
     }
 });
+
+// ==========================================
+// AI Career Mentor (Vanilla JS Integration)
+// ==========================================
+const STATIC_MENTOR_ADVICE = {
+    S: {
+        title: "格局與落地的平衡術",
+        intro: "針對「決策導航員」在嘉新企業團多角化佈局下的職涯發展，您所具備的長期思維與全局觀，是引領團隊航向未來的關鍵大腦。然而，在面臨綠能轉型與高感度服務的過渡期中，如何將宏大的策略藍圖具體落地，轉化為各部門可執行的日常指標，將是您在此階段需要突破的核心職涯課題。",
+        blindSpots: [
+            { title: "🔎 潛在職涯盲點：宏觀策略與執行脫節", desc: "過於聚焦**長遠規劃與宏觀藍圖**，容易忽略前線協作部門對細節與數據的迫切需求。在與**財務處、總務處**等高度看重數字與具體執行方案的後勤單位協作時，若未能提供清晰的分步執行步驟，容易使策略在推行時產生落地阻力。" },
+            { title: "🔎 潛在職涯盲點：溝通頻率與情感失焦", desc: "因思維速度極快且格局宏大，在跨部門會議中容易**忽略基層同仁對變革的焦慮感**。若缺乏同理心與雙向溝通，專業策略可能被誤解為不接地氣的指令，降低組織的配合熱情。" }
+        ],
+        growthAdvice: [
+            { title: "🚀 職涯成長建議：推動戰術分段編排", desc: "嘗試將長期的永續願景拆解為**階段性的短期目標**，讓跨部門夥伴有明確的「第一步」能跟隨，降低前線同仁在變革時的迷茫，確保策略穩步推進。" },
+            { title: "🚀 職涯成長建議：建立第一線反饋機制", desc: "主動深入物業管理或高端旅宿現場，**傾聽執行端反饋**，將您的策略視野與現場實務結合，設計出兼具高度戰略意義與溫度溫情的方案。" }
+        ]
+    },
+    P: {
+        title: "完美與彈性的哲學",
+        intro: "針對「精準構築師」在嘉新企業團邁向高感度服務與綠色永續轉型期的發展，您的嚴謹與高度責任感是確保企業合規與品質的最佳防線。但在充滿未知與變動的創新探索中，如何平衡法遵、程序與營運敏捷性，是您更上一層樓的重要轉變點。",
+        blindSpots: [
+            { title: "🔎 潛在職涯盲點：過度依賴舊有合規框架", desc: "在推動綠能或旅宿等無 SOP 可循的全新業務時，容易因追求**絕對完美的規範**而感到焦慮，甚至在不經意間對組織的彈性創新產生阻力，使創新部門感到綁手綁腳。" },
+            { title: "🔎 潛在職涯盲點：跨部門溝通缺乏情感溫度", desc: "習慣以法規條款與硬性數據說話，但本集團高度重視**「以人為本」的款待精神**。若與前線夥伴協作時過度講求條款，容易給人冰冷生硬的感受，增加推推動阻力。" }
+        ],
+        growthAdvice: [
+            { title: "🚀 職涯成長建議：擁抱敏捷快速迭代思維", desc: "在變革專案中嘗試將完美定義為**階段性的最小可行性產品 (MVP)**。容許方案有微調彈性，以快速試錯代替過度規劃，保持組織敏捷度。" },
+            { title: "🚀 職涯成長建議：設計有溫度的合規導引", desc: "在制定全新規範前，主動與執行端同仁進行非正式茶敘，**同理前線的痛點**，將法遵條款轉化為實質幫助同仁優化工作效率的協作工具。" }
+        ]
+    },
+    H: {
+        title: "溫慢與界線的調和",
+        intro: "針對「文化編織者」在嘉新多角化與綠能轉型下的職涯路徑，您強大的同理心與人際協調力，是凝聚跨部門共識、推動企業文化的核心黏著劑。然而，如何將深厚的人際價值轉化為引領組織轉型的戰略影響力，將是您的核心關鍵。",
+        blindSpots: [
+            { title: "🔎 潛在職涯盲點：過度體恤導致界線模糊", desc: "太過在意同仁的情感感受，容易在推動組織改革或進行績效管理時**模糊了專業職責的邊界**，甚至讓自己承擔了過多非必要的跨部門情緒重擔，造成內部內耗。" },
+            { title: "🔎 潛在職涯盲點：迴避衝突而擱置核心痛點", desc: "為了維持團體表面的和諧氛圍，可能會在跨部門會議中**避談流程或效率上的根本問題**，導致長期的協作卡點無法被真正突破與解決。" }
+        ],
+        growthAdvice: [
+            { title: "🚀 職涯成長建議：建立專業數據化對話", desc: "練習將感性的關懷轉化為**客觀的制度優化建議**。在決策會議中多運用具體事實與數據佐證，提升您在專業管理層面的影響力與說服力。" },
+            { title: "🚀 職涯成長建議：引引導良性與建設性衝突", desc: "將意見分歧視為流程改善的契機，練習在尊重的氛圍下**引導聚焦於目標的真誠辯論**，協助團隊打破協作僵局，創造真正的共識。" }
+        ]
+    },
+    A: {
+        title: "衝勁與耐力的節奏",
+        intro: "針對「前線開拓官」在嘉新企業團開拓新創事業與多元物業經營的佈局，您那無與倫比的行動力與即時應變力，是集團在前線衝鋒陷陣不可或缺的開路尖兵。但在大型企業穩健發展的體系中，如何與後勤協調以整合資源，是您的核心方向。",
+        blindSpots: [
+            { title: "🔎 潛在職涯盲點：因快攻而忽略潛在法規風險", desc: "過於追求推進速度，容易在專案前期**忽略與財務處、法務處或稽核室的對焦**。這可能導致專案在進行至中後期時，遭遇合規與風控流程的阻礙而停滯。" },
+            { title: "🔎 潛在職涯盲點：對常規行政流程缺乏耐心", desc: "面對跨部門簽呈或集團制度時容易感到不耐，這種情緒可能傳遞給行政後勤單位，使其產生**不受尊重的挫折感**，無形中增加了日後協作的阻力。" }
+        ],
+        growthAdvice: [
+            { title: "🚀 職涯成長建議：戰略性合規前置對接", desc: "在專案規劃初期，主動邀請**法務、財務 或 永續發展辦公室**的專家參與，把潛在法遵與風控指標融入初始設計中，確保專案快速且合法地推進。" },
+            { title: "🚀 職涯成長建議：修煉組織長線經營的耐心", desc: "學會將您的個人衝鋒步伐與集團整體的穩健腳步對齊，將開拓的熱情轉化為**可持續、可複製的永續商業模式**，創造更深遠的成果。" }
+        ]
+    },
+    X: {
+        title: "隱形翅膀的影響力",
+        intro: "針對「後勤支援者」在嘉新企業團平穩運營與物業、行政管理上的職涯發展，您的可靠、穩定與默默奉獻，是全體同仁最堅實的安全感來源。但在講求高感度服務與效率轉型的氛圍中，如何展現您的能見度是您的關鍵課題。",
+        blindSpots: [
+            { title: "🔎 潛在職涯盲點：被動承接任務缺乏預判性", desc: "傾向於被動等待指令或解決眼前的行政問題，較少針對現有的冗長流程提出預判性的優化提案，容易使您的**專業潛力受限於例行性框架**中。" },
+            { title: "🔎 潛在職涯盲點：核心貢獻難以被決策層看見", desc: "習慣在幕後當隱形推手，不主動溝通成果。在多角化經營、重視數據效益的現代化管理中，您的辛苦付出**容易被淡化或低估**，限制了晉升機會。" }
+        ],
+        growthAdvice: [
+            { title: "🚀 職涯成長建議：推動工作成果指標化", desc: "定期整理您的優化績效，利用客觀數據（如**流程時間節省比例、採購耗損降低%**）將後勤工作具體可視化呈現，展現您的管理績效。" },
+            { title: "🚀 職涯成長建議：主動發起跨部門流程優化", desc: "主動發掘跨部門協作的卡點，提出流程重塑專案。在展現後勤支持價值的同時，**彰顯您的問題解決能力與主動領導潛力**。" }
+        ]
+    },
+    T: {
+        title: "系統與溫度的連接",
+        intro: "針對「系統鍛造師」在嘉新數位化升級與永續系統建置的職涯道路上，您對系統邏輯與運作效率的極致追求，是推動組織升級的最強引擎。然而，如何在精密的科技系統中，帶入以人為本的溫暖溫度，是您面臨的核心考驗。",
+        blindSpots: [
+            { title: "🔎 潛在職涯盲點：高估非技術單位工具適應力", desc: "在推行新系統或自動化工具時，過度聚焦於邏輯的完美性，往往**低估了其他非技術部門的使用門檻**。這可能導致前線同仁在適應期產生抗拒，降低數位工具的使用成效。" },
+            { title: "🔎 潛在職涯盲點：純技術思維與業務情境脫節", desc: "習慣以程式或技術架構的思維溝通，若不結合**第一線物業管理或高端旅宿夥伴的真實工作場景**，系統功能容易顯得生硬，難以真正解決前線痛點。" }
+        ],
+        growthAdvice: [
+            { title: "🚀 職涯成長建議：導入人因工學與痛點訪談", desc: "在開發與推行任何新系統、新流程前，主動深入第一線進行使用者體驗（UX）訪談，**以使用者痛點為出發點進行系統迭代**。" },
+            { title: "🚀 職涯成長建議：成為有溫度的數位推廣者", desc: "將複雜生硬的系統說明書，包裝成**易懂的操作小故事或輕鬆的工作坊**，降低跨部門同仁對新工具的畏懼，協助組織無無痛數位轉型。" }
+        ]
+    }
+};
+
+async function generateDynamicAdvice() {
+    const contentDiv = document.getElementById('ai-mentor-content');
+    if (!contentDiv) return;
+
+    // Show loading spinner
+    contentDiv.innerHTML = `
+        <div class="quiz-ai-mentor-loading animate-fade-in">
+            <div class="quiz-ai-mentor-loading-spinner">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M16 3h5v5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 21H3v-5"/></svg>
+            </div>
+            <p class="quiz-ai-mentor-loading-text quiz-ai-mentor-pulse">
+                正在分析您的職場基因與特質組成...
+            </p>
+        </div>
+    `;
+
+    const primary = quizPrimaryPersona;
+    const userPersonaInfo = TRAIT_PERSONAS[primary];
+    
+    // Calculate score percentages
+    const totalScore = Object.values(quizDimensionScores).reduce((a, b) => a + b, 0);
+    const scorePercentages = Object.entries(quizDimensionScores)
+        .map(([k, v]) => `${DIMENSION_LABELS[k].label}: ${totalScore > 0 ? Math.round((v / totalScore) * 100) : 0}%`)
+        .join('、');
+
+    const systemPrompt = `你是一位世界級的高階企業發展顧問與職涯導師，專精於解析職場人格特質，並針對大型企業集團進行組織效能與職涯策略規劃。
+
+請針對「嘉新企業團」目前正處於從傳統水泥產業轉型為「綠色永續與多元事業體」的關鍵背景（多元佈局包含物業管理如嘉新大樓、股權投資與總部運營、月子中心、沖繩飯店等），為該位測驗者進行深度、極具戰略眼光的個人化職涯諮詢。
+
+請依據使用者的特質，嚴格遵守以下格式與字數規則生成 JSON 資料（總中文字數須嚴格控制在 500 至 600 字之間，字字珠璣、文字極度精鍊）：  
+1. title: 標題，命名一個響亮的發展哲學主題（如「完美與彈性的哲學」，12字以內）。  
+2. intro: 深度分析前導文（嚴格限制在 100 至 120 字）。剖析他在嘉新多角化與綠能轉型架構下的獨特價值。  
+3. blindSpots: 必須包含恰好兩個對象，每個對象有:  
+- title: 「🔎 潛在職涯盲點」子標題（15字以內）  
+- desc: 精準詳細分析（嚴格限制在 80 至 90 字）。描述在嘉新具體情境、跨部門協作中可能遇到的具體盲區與心理困境。可使用 **粗體** 標記關鍵詞。  
+4. growthAdvice: 必須包含恰好兩個對象，每個對象有:  
+- title: 「🚀 職涯成長建議」子標題（15字以內）  
+- desc: 具體可落實的行動指南（嚴格限制在 80 至 90 字）。結合嘉新的轉型趨勢給予方向。可使用 **粗體** 標記關鍵詞。
+
+【重要字數限制】  
+- 報告所有欄位（包括標題、前導文、2個盲點與2個成長建議的內容）的中文字數加總必須精準控制在 500 至 600 個中文字之內，切勿超出。`;
+
+    const userQuery = `請為以下職場人格特質分佈的使用者生成專屬深度諮詢報告：  
+- 主要職場角色：【${userPersonaInfo.title}】(代號：${primary})  
+- 人格特質分佈比例：${scorePercentages}  
+- 角色基礎描述：${userPersonaInfo.desc}
+
+請基於此特質組合，提供一份對比嘉新企業團轉型情境的深度分析。`;
+
+    const apiKey = ""; // 預設留空，若有 API 金鑰可填入此處
+    const modelName = "gemini-1.5-flash";
+    const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`;
+
+    const payload = {
+        contents: [{ parts: [{ text: userQuery }] }],
+        systemInstruction: { parts: [{ text: systemPrompt }] },
+        generationConfig: {
+            responseMimeType: "application/json",
+            responseSchema: {
+                type: "OBJECT",
+                properties: {
+                    title: { type: "STRING" },
+                    intro: { type: "STRING" },
+                    blindSpots: {
+                        type: "ARRAY",
+                        items: {
+                            type: "OBJECT",
+                            properties: {
+                                title: { type: "STRING" },
+                                desc: { type: "STRING" }
+                            },
+                            required: ["title", "desc"]
+                        }
+                    },
+                    growthAdvice: {
+                        type: "ARRAY",
+                        items: {
+                            type: "OBJECT",
+                            properties: {
+                                title: { type: "STRING" },
+                                desc: { type: "STRING" }
+                            },
+                            required: ["title", "desc"]
+                        }
+                    }
+                },
+                required: ["title", "intro", "blindSpots", "growthAdvice"]
+            }
+        }
+    };
+
+    let success = false;
+    let finalJson = null;
+
+    if (apiKey) {
+        let attempt = 0;
+        const maxAttempts = 3;
+        while (attempt < maxAttempts && !success) {
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    const responseText = result?.candidates?.[0]?.content?.parts?.[0]?.text;
+                    if (responseText) {
+                        finalJson = JSON.parse(responseText);
+                        success = true;
+                    }
+                }
+            } catch (err) {
+                attempt++;
+                if (attempt < maxAttempts) {
+                    await new Promise(res => setTimeout(res, 1000 * Math.pow(2, attempt)));
+                }
+            }
+        }
+    }
+
+    if (!success) {
+        finalJson = STATIC_MENTOR_ADVICE[primary];
+    }
+
+    renderAdviceContent(finalJson);
+}
+
+function renderAdviceContent(advice) {
+    const contentDiv = document.getElementById('ai-mentor-content');
+    if (!contentDiv) return;
+
+    const formatBold = (text) => {
+        if (!text) return "";
+        return text.split('**').map((part, index) => {
+            if (index % 2 === 1) {
+                return `<strong class="quiz-ai-mentor-strong">${part}</strong>`;
+            }
+            return part;
+        }).join('');
+    };
+
+    let blindSpotsHtml = '';
+    advice.blindSpots?.forEach(item => {
+        blindSpotsHtml += `
+            <div class="quiz-ai-mentor-card blind-spot">
+                <p class="quiz-ai-mentor-card-title blind-spot">${item.title}</p>
+                <p class="quiz-ai-mentor-card-desc">${formatBold(item.desc)}</p>
+            </div>
+        `;
+    });
+
+    let growthAdviceHtml = '';
+    advice.growthAdvice?.forEach(item => {
+        growthAdviceHtml += `
+            <div class="quiz-ai-mentor-card growth-advice">
+                <p class="quiz-ai-mentor-card-title growth-advice">${item.title}</p>
+                <p class="quiz-ai-mentor-card-desc">${formatBold(item.desc)}</p>
+            </div>
+        `;
+    });
+
+    contentDiv.innerHTML = `
+        <div class="quiz-ai-mentor-result-wrapper animate-fade-in">
+            <h4 class="quiz-ai-mentor-result-title">${advice.title}</h4>
+            <p class="quiz-ai-mentor-result-intro">${advice.intro}</p>
+            
+            <div class="quiz-ai-mentor-section-container">
+                <div>
+                    <h5 class="quiz-ai-mentor-section-title">
+                        🔎 潛在職涯盲點
+                    </h5>
+                    <div class="quiz-ai-mentor-card-list">
+                        ${blindSpotsHtml}
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="quiz-ai-mentor-section-title">
+                        🚀 職涯成長建議
+                    </h5>
+                    <div class="quiz-ai-mentor-card-list">
+                        ${growthAdviceHtml}
+                    </div>
+                </div>
+            </div>
+        </div>
+    `;
+}
 
 
