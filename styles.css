@@ -113,7 +113,10 @@ body {
     height: auto;
     /* We processed to transparent PNG, no mix-blend-mode required keeping it clean */
     filter: drop-shadow(0 5px 8px rgba(0, 0, 0, 0.1));
-    transition: all 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), filter 0.3s ease;
+    will-change: transform, filter;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
 }
 
 /* Hover Effects exactly as requested */
@@ -2279,4 +2282,47 @@ body {
 .quiz-ai-mentor-strong {
     font-weight: 800;
     color: #0C4A6E;
+}
+
+/* =========================================
+   Destiny Corner (命定小角落 UI)
+   ========================================= */
+
+.quiz-destiny-corner-box {
+    width: 100%;
+    margin-bottom: 32px;
+    background: white;
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid #E0F2FE;
+    box-shadow: 0 4px 20px rgba(2, 132, 199, 0.05);
+    box-sizing: border-box;
+}
+
+.quiz-destiny-corner-title {
+    color: #38BDF8;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 0 0 12px 0;
+}
+
+.quiz-destiny-corner-content {
+    border-left: 4px solid #38BDF8;
+    padding-left: 16px;
+}
+
+.quiz-destiny-corner-location {
+    color: #0C4A6E;
+    font-weight: 900;
+    font-size: 24px;
+    margin: 0 0 4px 0;
+    line-height: 1.2;
+}
+
+.quiz-destiny-corner-quote {
+    color: #0C4A6E;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0;
 }

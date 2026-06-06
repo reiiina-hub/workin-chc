@@ -1562,12 +1562,21 @@ const QUIZ_ICONS = {
     Target: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>`,
     ShieldCheck: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>`,
     Users: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>`,
-    Rocket: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 3.4-2 3.4s2.14-.5 3.4-2c1.26-1.5 2-3.4 2-3.4s-2.14.5-3.4 2Z"/><path d="M12 12c-3 3-7 3-7 3s0-4 3-7c2-2 5-3 8-3 3 0 6 3 6 3s-1 6-3 8c-1 1-3 2-4 2Z"/><path d="M9 15s.5 2.5 2 4c1.5 1.5 4 2 4 2s-.5-2.5-2-4"/><path d="M15 9s2.5.5 4 2c1.5 1.5 2 4 2 4s-2.5-.5-4-2"/><path d="m9 15 3-3"/></svg>`,
+    Rocket: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>`,
     Building: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="20" x="4" y="2" rx="2" ry="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01"/><path d="M16 6h.01"/><path d="M8 10h.01"/><path d="M16 10h.01"/><path d="M8 14h.01"/><path d="M16 14h.01"/></svg>`,
     Monitor: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="3" rx="2"/><line x1="8" x2="16" y1="21" y2="21"/><line x1="12" x2="12" y1="17" y2="21"/></svg>`,
     Sparkles: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="m5 3 1 2.5L8.5 6 6 7 5 9.5 4 7 1.5 6 4 5.5z"/><path d="m19 17 1 2.5 2.5.5-2.5 1-1 2.5-1-2.5-2.5-1 2.5-1z"/></svg>`,
     ChevronRight: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>`,
     RefreshCw: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M16 3h5v5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 21H3v-5"/></svg>`
+};
+
+const PERSONALITY_CORNERS = {  
+    S: [{ location: "會議室", quote: "這裡最適合把大家的混亂想法救回來。" }, { location: "白板前", quote: "三色白板筆、滿滿便利貼，是最舒適的戰場。" }, { location: "公司大廳", quote: "人越多的地方，越需要有人幫忙看清方向。" }],  
+    P: [{ location: "辦公桌", quote: "桌面越清楚，腦袋越清楚。" }, { location: "影印機旁", quote: "格式、頁碼、邊距沒對齊，比卡紙還難受。" }, { location: "資料區", quote: "檔案放錯地方，比沒做還痛苦。" }],  
+    H: [{ location: "茶水間", quote: "跟同事閒聊個十分鐘，比開一小時的會更能解開心結。" }, { location: "會議室", quote: "有些共識，是慢慢聊出來的，不是投票決定的。" }, { location: "植栽角落", quote: "照顧環境、照顧人，都是同一件事。" }],  
+    A: [{ location: "電梯口", quote: "生活的節奏，比電梯還快。" }, { location: "窗邊座位", quote: "看得遠一點，才知道下一步往哪。" }, { location: "公司大門", quote: "方向不一定清楚，但腳步永遠先開始。" }],  
+    X: [{ location: "倉庫", quote: "什麼東西找不到？我來。" }, { location: "廁所", quote: "世界很吵，但這裡可以先喘口氣。" }, { location: "角落座位", quote: "即使沒有鎂光燈，也可以把每一個細節做到完美。" }],  
+    T: [{ location: "廁所", quote: "世界很吵，但這裡可以先喘口氣。" }, { location: "樓梯間", quote: "走樓梯的時候，腦袋比腳步還忙。" }, { location: "辦公桌", quote: "桌面可以亂，但線一定要整齊。" }]  
 };
 
 let currentQuizQuestionIndex = 0;
@@ -1576,6 +1585,7 @@ let quizShuffledOptions = [];
 let quizSelectedDeptId = null;
 let quizDimensionScores = null;
 let quizPrimaryPersona = null;
+let quizDestinyCorner = null;
 let quizTopDepartments = [];
 
 function renderQuizWelcome() {
@@ -1585,6 +1595,7 @@ function renderQuizWelcome() {
     quizSelectedDeptId = null;
     quizDimensionScores = null;
     quizPrimaryPersona = null;
+    quizDestinyCorner = null;
     quizTopDepartments = [];
 
     const container = document.getElementById('quiz-container');
@@ -1716,6 +1727,13 @@ function calculateQuizResults() {
 
     const primary = sortedTraits[0].trait;
     quizPrimaryPersona = primary;
+
+    const corners = PERSONALITY_CORNERS[primary];
+    if (corners && corners.length > 0) {
+        quizDestinyCorner = corners[Math.floor(Math.random() * corners.length)];
+    } else {
+        quizDestinyCorner = null;
+    }
 
     const scoreS = cleanScores.S;
     const scoreP = cleanScores.P;
@@ -1904,6 +1922,20 @@ function renderQuizResult() {
 
     const hashKeywords = persona.keywords.split('｜').map(kw => `#${kw.trim()}`).join(' ');
 
+    let destinyCornerHtml = '';
+    if (quizDestinyCorner) {
+        destinyCornerHtml = `
+            <!-- Destiny Corner Card -->
+            <div class="quiz-destiny-corner-box">
+                <p class="quiz-destiny-corner-title">你的命定小角落是：</p>
+                <div class="quiz-destiny-corner-content">
+                    <p class="quiz-destiny-corner-location">${quizDestinyCorner.location}</p>
+                    <p class="quiz-destiny-corner-quote">「${quizDestinyCorner.quote}」</p>
+                </div>
+            </div>
+        `;
+    }
+
     container.innerHTML = `
         <div class="quiz-result-view animate-fade-in" style="overflow-y: auto;">
             <!-- Header: Persona Icon & Title -->
@@ -1918,6 +1950,9 @@ function renderQuizResult() {
                 <div class="quiz-result-keywords-title">關鍵特質</div>
                 <div class="quiz-result-keywords-text">${hashKeywords}</div>
             </div>
+
+            <!-- Destiny Corner Card -->
+            ${destinyCornerHtml}
 
             <!-- Chart -->
             <div class="quiz-chart-box">
